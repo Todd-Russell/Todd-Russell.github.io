@@ -1,0 +1,50 @@
+[
+  {
+    "id": "laser-scribing",
+    "title": "Laser Scribing Automation & Machine Vision Integration",
+    "company": "CubicPV Inc.",
+    "year": "2024",
+    "tags": ["Machine Vision", "Automation", "Laser Systems", "Python"],
+    "description": "Automated the laser scribing process for perovskite solar modules, integrating machine vision for automatic positional alignment and skew correction. Achieved 500% throughput increase and improved positional repeatability from 60μm to 20μm, enabling transition from engineer to technician operation."
+  },
+  {
+    "id": "module-efficiency",
+    "title": "World-Record Perovskite Module Efficiency",
+    "company": "CubicPV Inc.",
+    "year": "2024",
+    "tags": ["Solar Technology", "Module Development", "NREL", "Process Engineering"],
+    "description": "Led all loss mechanisms related to perovskite solar cell modulization. Achieved world-record 24% efficiency through joint development with NREL, driving a 34% improvement in initial module efficiency and 35× improvement in degradation lifespan."
+  },
+  {
+    "id": "defect-tracking",
+    "title": "Company-Wide Defect Tracking System",
+    "company": "CubicPV Inc.",
+    "year": "2023",
+    "tags": ["Process Engineering", "Data Analysis", "Systems Design"],
+    "description": "Identified two defects present on 50% of modules causing 20× degradation impact compared to other defects. Wrote functional specification for the software team and led company-wide rollout, enabling large-scale data collection to guide deliberate improvements."
+  },
+  {
+    "id": "icp-prototype",
+    "title": "Non-Invasive Intracranial Pressure Measurement Prototype",
+    "company": "CranioView",
+    "year": "2023",
+    "tags": ["Medical Devices", "Mechatronics", "Prototyping", "Ultrasound"],
+    "description": "Developed a user-friendly prototype testbed to evaluate a groundbreaking non-invasive method of measuring intracranial pressure via ultrasound in patients who have recently suffered acute neurologic injury."
+  },
+  {
+    "id": "f35-analysis",
+    "title": "F-35 Ground Equipment Cost-Benefit Analysis",
+    "company": "National Security Innovation Network, U.S. Air Force",
+    "year": "2021",
+    "tags": ["Systems Analysis", "Aerospace", "Technical Writing"],
+    "description": "Lead author of a cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Auxiliary Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base. Recommended strategy was implemented at Luke AFB with planned nationwide rollout."
+  },
+  {
+    "id": "nasa-microg",
+    "title": "NASA Micro-g NExT EVA Tool Attachment",
+    "company": "MEC Team at Berkeley",
+    "year": "2021",
+    "tags": ["NASA", "Mechanical Design", "FEA", "Space Systems"],
+    "description": "Designed, proposed, and manufactured an EVA tool attachment mechanism for astronaut utility belts for NASA's Micro-g NExT Challenge. Utilized FEA, FMEA Risk Matrix, Compliance Matrix, and Trade Study Pugh Chart. Selected for Phase 2 testing at NASA's Neutral Buoyancy Lab."
+  }
+]

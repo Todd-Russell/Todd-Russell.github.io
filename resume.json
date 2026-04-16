@@ -1,0 +1,95 @@
+{
+  "name": "Todd Russell",
+  "title": "Mechanical Engineer",
+  "tagline": "Mechatronics · Automation · Precision Manufacturing · Solar Technology",
+  "location": "Boston, MA",
+  "email": "ToddRussell@proton.me",
+  "linkedin": "https://www.linkedin.com/in/todd-russell-7ab2b01a8/",
+  "summary": "Engineer who fuses a passion for mechatronics and design with a drive to push the boundaries of what is possible. Thrive solving complex problems in novel ways.",
+  "stats": [
+    { "value": "500%", "label": "Throughput Increase" },
+    { "value": "70%",  "label": "Positional Variation Reduced" },
+    { "value": "35×",  "label": "Degradation Lifespan Improved" },
+    { "value": "24%",  "label": "World-Record Module Efficiency" }
+  ],
+  "experience": [
+    {
+      "company": "CubicPV Inc.",
+      "role": "Engineer III",
+      "period": "Oct 2023 – Present",
+      "location": "Bedford, MA",
+      "highlights": [
+        "Drove 34% improvement in initial module efficiency and 35× improvement in module degradation lifespan as lead of module development.",
+        "Achieved world-record 24% perovskite module efficiency through joint development with NREL.",
+        "Increased laser scribing throughput by 500%, yield by 5%, and reduced positional repeatability from 60μm to 20μm through automation and machine vision integration.",
+        "Reduced total positional variation throughout the production line by 70% via targeted mechanical and process improvements.",
+        "Spearheaded company-wide defect tracking initiative — identified two defects present on 50% of modules causing 20× degradation impact."
+      ]
+    },
+    {
+      "company": "CranioView",
+      "role": "R&D Mechanical Engineering Intern",
+      "period": "May 2023 – Sep 2023",
+      "location": "Los Angeles, CA",
+      "highlights": [
+        "Developed user-friendly prototype to collect patient data and evaluate a groundbreaking non-invasive method of measuring intracranial pressure via ultrasound in patients with acute neurologic injury."
+      ]
+    },
+    {
+      "company": "No Pollution Industrial Systems Ltd.",
+      "role": "Mechanical Engineering Design Intern",
+      "period": "May 2022 – July 2022",
+      "location": "Edinburgh, UK",
+      "highlights": [
+        "Designed and modeled bespoke soundproofing, heat recovery, and controlled climate enclosure systems in SolidWorks.",
+        "Built master assemblies composed of thousands of components nested within subassemblies.",
+        "Improved the company's pack-and-go subassembly system to streamline workflow."
+      ]
+    },
+    {
+      "company": "National Security Innovation Network, U.S. Air Force",
+      "role": "Research Fellow",
+      "period": "June 2021 – Aug 2021",
+      "location": "Phoenix, AZ",
+      "highlights": [
+        "Lead author of cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base.",
+        "Recommended strategy was implemented at Luke AFB with planned nationwide rollout."
+      ]
+    },
+    {
+      "company": "Mechanical Engineering Competition Team at Berkeley",
+      "role": "Mechanical Engineer",
+      "period": "Sep 2020 – July 2021",
+      "location": "Berkeley, CA",
+      "highlights": [
+        "Designed, proposed, and manufactured an EVA tool attachment mechanism for astronaut utility belts for NASA's Micro-g NExT Challenge.",
+        "Editor-in-Chief of technical report utilizing Compliance Matrix, FEA, FMEA Risk Matrix, and Trade Study Pugh Chart.",
+        "Selected for Phase 2 — design was manufactured, tested, and evaluated at NASA's Neutral Buoyancy Lab."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Northeastern University",
+      "degree": "M.S. Mechanical Engineering · Certificate of Engineering Leadership",
+      "period": "Sep 2023 – May 2025",
+      "details": "Gordon Fellow, Gordon Institute of Engineering Leadership"
+    },
+    {
+      "school": "University of California, Berkeley",
+      "degree": "B.S. Mechanical Engineering",
+      "period": "Aug 2019 – May 2023",
+      "details": "GPA 3.89 / 4.0 · Cum Laude (Top 10%) · Dean's List, College of Engineering"
+    },
+    {
+      "school": "University of Edinburgh",
+      "degree": "Study Abroad — Mechanical Engineering",
+      "period": "Sep 2021 – May 2022",
+      "details": "Control of UAVs · Mechatronics Design · Manufacturing & Tolerancing · Control Systems Engineering"
+    }
+  ],
+  "skills": {
+    "Software": ["MATLAB", "Python", "C++", "Arduino", "LabVIEW", "Simulink", "AutoCAD", "SolidWorks", "GitHub"],
+    "Engineering": ["Mechatronics", "Machine Vision", "Laser Systems", "CAD / GD&T", "Control Theory (PIDs)", "Electromechanical Design", "Rapid Prototyping", "3D Printing", "DAQ & Analysis", "Iterative Design", "Mechanical Design", "Tolerance Analysis"]
+  }
+}
