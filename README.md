@@ -1,25 +1,17 @@
 # Todd Russell — Engineering Portfolio
 
-Personal portfolio hosted on [GitHub Pages](https://pages.github.com).
+Personal portfolio hosted on todd-russell.github.io/portfolio.
 
 ## Repository Structure
 
 ```
-toddrussell.github.io/
+todd-russell.github.io/portfolio
 ├── index.html          # Main site — reads and renders from JSON data files
-├── data/
-│   ├── resume.json     # Experience, education, skills, stats bar
-│   └── projects.json   # Project cards grid
+├── resume.json     # Experience, education, skills, stats bar
+├── projects.json   # Project cards grid
 ├── assets/             # Images and static files (optional)
 └── README.md
 ```
-
-## GitHub Pages Setup
-
-1. Create a repo named exactly `toddrussell.github.io`
-2. Push all files to the `main` branch
-3. Go to **Settings → Pages** and confirm source is set to `main` branch, root directory
-4. Site will be live at `https://toddrussell.github.io` within ~60 seconds
 
 ## Updating the Site (Cowork Automation)
 
@@ -27,7 +19,7 @@ All content lives in two JSON files. The HTML never needs to change for content 
 
 ### Add a new project
 
-Add an object to `data/projects.json`:
+Add an object to `projects.json`:
 
 ```json
 {
@@ -42,17 +34,18 @@ Add an object to `data/projects.json`:
 
 ### Update experience or resume data
 
-Edit the relevant fields in `data/resume.json` — experience entries, education, skills, or stats.
+Edit the relevant fields in `resume.json` — experience entries, education, skills, or stats.
 
 ### Programmatic update via GitHub API
 
 ```
 # 1. Get current file SHA (required for PUT)
-GET https://api.github.com/repos/toddrussell/toddrussell.github.io/contents/data/projects.json
-  → note the "sha" field
+GET https://api.github.com/repos/todd-russell/todd-russell.github.io/contents/portfolio/resume.json
+GET https://api.github.com/repos/todd-russell/todd-russell.github.io/contents/portfolio/projects.json
 
 # 2. Update the file
-PUT https://api.github.com/repos/toddrussell/toddrussell.github.io/contents/data/projects.json
+PUT https://api.github.com/repos/todd-russell/todd-russell.github.io/contents/portfolio/resume.json
+PUT https://api.github.com/repos/todd-russell/todd-russell.github.io/contents/portfolio/projects.json
 Headers: Authorization: Bearer <GITHUB_TOKEN>
 Body:
 {
