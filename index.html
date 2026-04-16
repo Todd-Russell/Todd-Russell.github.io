@@ -677,8 +677,8 @@
     async function init() {
       try {
         const [rRes, pRes] = await Promise.all([
-          fetch('data/resume.json'),
-          fetch('data/projects.json')
+          fetch('resume.json'),
+          fetch('projects.json')
         ]);
         const resume   = await rRes.json();
         const projects = await pRes.json();
