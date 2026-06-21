@@ -6,35 +6,66 @@ Personal portfolio hosted on todd-russell.github.io/portfolio.
 
 ```
 todd-russell.github.io/portfolio
-├── index.html          # Main site — reads and renders from JSON data files
-├── resume.json     # Experience, education, skills, stats bar
-├── projects.json   # Project cards grid
-├── assets/             # Images and static files (optional)
+├── index.html       # Main site — renders from the JSON data files at runtime
+├── resume.json      # Hero, stats, experience, education, coursework, skills, publications
+├── projects.json    # Projects, grouped into four categories
+├── assets/          # Project images (referenced by projects.json)
 └── README.md
 ```
 
-## Updating the Site (Cowork Automation)
+All content lives in the two JSON files. The HTML rarely needs to change for content updates.
 
-All content lives in two JSON files. The HTML never needs to change for content updates.
+## Local preview
 
-### Add a new project
+Serve the folder over HTTP, then open the local URL:
 
-Add an object to `projects.json`:
+```
+python -m http.server 8000
+# visit http://localhost:8000
+```
+
+Opening `index.html` directly (file://) will not work, because the browser blocks
+`fetch` of the local JSON files. A simple HTTP server (or GitHub Pages) is required.
+
+## Updating the site
+
+### Add or edit a project
+
+Add an object to `projects.json`. Schema:
 
 ```json
 {
   "id": "unique-id",
-  "title": "Project Title",
+  "category": "Work",
+  "featured": false,
   "company": "Company or Team Name",
+  "title": "Project Title",
   "year": "2025",
+  "image": "assets/your-photo.jpg",
+  "metric": { "value": "500%", "label": "throughput increase" },
+  "summary": "One-line result shown on the card.",
   "tags": ["Tag1", "Tag2", "Tag3"],
-  "description": "One to two sentence description of the project and key outcomes."
+  "par": {
+    "problem": "What needed solving.",
+    "action": "What you did.",
+    "result": "The measurable outcome."
+  }
 }
 ```
 
-### Update experience or resume data
+Field notes:
+- `category` — one of `Work`, `Class`, `Club`, `Personal`. Drives the filter tabs.
+- `featured` — set `true` for the one project that leads its category as the spotlight.
+- `image` — relative path to a file in `assets/`, or `null`. If `null`, the card shows
+  an accent metric tile (from `metric`) instead of a photo.
+- `metric` — `{ value, label }` used for the metric tile and as a headline number.
+  Optional; omit with `null`.
+- `par` — optional Problem/Action/Result detail revealed when the card is expanded.
 
-Edit the relevant fields in `resume.json` — experience entries, education, skills, or stats.
+### Update resume data
+
+Edit `resume.json`: `tagline`, `descriptors`, `stats`, `experience`, `education`,
+`coursework`, `skills`, `publications`, `resumePdf`, `linkedin`, `email`.
 
 ### Programmatic update via GitHub API
 

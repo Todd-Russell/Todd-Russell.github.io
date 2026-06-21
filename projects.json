@@ -1,50 +1,369 @@
 [
   {
-    "id": "laser-scribing",
-    "title": "Laser Scribing Automation & Machine Vision Integration",
+    "id": "module-efficiency",
+    "category": "Work",
+    "featured": true,
     "company": "CubicPV Inc.",
-    "year": "2024",
-    "tags": ["Machine Vision", "Automation", "Laser Systems", "Python"],
-    "description": "Automated the laser scribing process for perovskite solar modules, integrating machine vision for automatic positional alignment and skew correction. Achieved 500% throughput increase and improved positional repeatability from 60μm to 20μm, enabling transition from engineer to technician operation."
+    "title": "World-Record Perovskite Module",
+    "year": "2025",
+    "image": "assets/module-24.jpg",
+    "metric": { "value": "24%", "label": "world-record module efficiency" },
+    "summary": "Led all modulization loss mechanisms to a world-record 24% efficiency module, jointly developed with NLR (formerly NREL).",
+    "tags": ["Module Development", "NLR", "Process Engineering", "Solar"],
+    "par": {
+      "problem": "Modulizing perovskite solar cells introduced loss mechanisms that capped both efficiency and degradation lifespan.",
+      "action": "As lead of module development, owned every loss mechanism related to cell modulization and drove joint development with NLR (formerly NREL).",
+      "result": "Achieved a world-record 24.0% efficiency module, a 35% relative gain in initial module efficiency, and a 35× improvement in degradation lifespan. Work published in Science (2025)."
+    }
   },
   {
-    "id": "module-efficiency",
-    "title": "World-Record Perovskite Module Efficiency",
+    "id": "laser-scribing",
+    "category": "Work",
+    "featured": false,
     "company": "CubicPV Inc.",
+    "title": "Laser Scribing Automation & Machine Vision",
     "year": "2024",
-    "tags": ["Solar Technology", "Module Development", "NREL", "Process Engineering"],
-    "description": "Led all loss mechanisms related to perovskite solar cell modulization. Achieved world-record 24% efficiency through joint development with NREL, driving a 34% improvement in initial module efficiency and 35× improvement in degradation lifespan."
+    "image": "assets/laser-scribing.jpg",
+    "metric": { "value": "500%", "label": "throughput increase" },
+    "summary": "Automated laser scribing with machine-vision alignment; 500% throughput and repeatability from 60μm to 20μm.",
+    "tags": ["Machine Vision", "Python", "Laser Systems", "Automation"],
+    "par": {
+      "problem": "Manual laser scribing was slow, engineer-dependent, and positionally inconsistent across substrates.",
+      "action": "Automated the process with a Sherlock machine-vision system to detect glass-edge position and skew, and built a parameterized, recipe-based UI that adapts to evolving production needs, transitioning operation from engineer to technician level.",
+      "result": "Increased throughput 500% and yield 5%, cut takt time 33%, and improved 6σ positional repeatability from 60μm to 20μm."
+    }
   },
   {
     "id": "defect-tracking",
-    "title": "Company-Wide Defect Tracking System",
+    "category": "Work",
+    "featured": false,
     "company": "CubicPV Inc.",
-    "year": "2023",
+    "title": "Company-Wide Defect Tracking System",
+    "year": "2025",
+    "image": null,
+    "metric": { "value": "20×", "label": "degradation impact isolated" },
+    "summary": "Identified two defect types on 50% of modules driving 20× the degradation impact of all others combined.",
     "tags": ["Process Engineering", "Data Analysis", "Systems Design"],
-    "description": "Identified two defects present on 50% of modules causing 20× degradation impact compared to other defects. Wrote functional specification for the software team and led company-wide rollout, enabling large-scale data collection to guide deliberate improvements."
+    "par": {
+      "problem": "Degradation drivers were not systematically tracked, so process improvements were not data-driven.",
+      "action": "Spearheaded a defect tracking initiative, built a Pareto linking frequency and severity to degradation, and authored the functional specification for the software team.",
+      "result": "Identified two defect types present on 50% of modules causing 20× the degradation impact of all other categories combined, enabling company-wide rollout and large-dataset-driven process improvements."
+    }
   },
   {
-    "id": "icp-prototype",
-    "title": "Non-Invasive Intracranial Pressure Measurement Prototype",
-    "company": "CranioView",
-    "year": "2023",
-    "tags": ["Medical Devices", "Mechatronics", "Prototyping", "Ultrasound"],
-    "description": "Developed a user-friendly prototype testbed to evaluate a groundbreaking non-invasive method of measuring intracranial pressure via ultrasound in patients who have recently suffered acute neurologic injury."
+    "id": "nir-jig",
+    "category": "Work",
+    "featured": false,
+    "company": "CubicPV Inc.",
+    "title": "NIR Characterization Jig",
+    "year": "2026",
+    "image": "assets/nir-jig-assembled.jpg",
+    "metric": null,
+    "summary": "Scoped, designed, and delivered a custom near-infrared characterization fixture, requirements to assembled tool.",
+    "tags": ["SolidWorks", "3D Printing", "Mechanical Design"],
+    "par": {
+      "problem": "Characterization work needed a repeatable NIR fixture with no off-the-shelf option available.",
+      "action": "Gathered requirements with stakeholders, pitched two concepts, modeled the selected design in SolidWorks, then 3D printed and assembled it.",
+      "result": "Jig assembled and installed in the lab, enabling repeatable NIR characterization of substrates."
+    }
+  },
+  {
+    "id": "ss2-frame",
+    "category": "Work",
+    "featured": false,
+    "company": "CubicPV Inc.",
+    "title": "SS2 RobotUnit Frame",
+    "year": "2026",
+    "image": "assets/ss2-frame-installed.jpg",
+    "metric": null,
+    "summary": "Designed, fabricated, and installed a structural frame for the SS2 outdoor test system.",
+    "tags": ["SolidWorks", "Fabrication", "Structural Design"],
+    "par": {
+      "problem": "The SS2 test station needed a robot-unit frame consistent with the existing SS1 design and lab constraints.",
+      "action": "Measured the SS1 frame, modeled SS2 in SolidWorks, cut stock, and assembled the structure.",
+      "result": "Frame fabricated and installed, enabling outdoor degradation testing of production modules."
+    }
+  },
+  {
+    "id": "dmc-tray-scanner",
+    "category": "Work",
+    "featured": false,
+    "company": "CubicPV Inc.",
+    "title": "DMC Tray Scanner",
+    "year": "2026",
+    "image": "assets/DMC-tray-scanner-build.png",
+    "cadImage": "assets/DMC-tray-scanner-CAD.png",
+    "metric": { "value": "~90%", "label": "scan time reduction" },
+    "summary": "Designed and built a linear DMC scanning system that captures each substrate's tray position in a single pass, cutting scan time ~90%.",
+    "tags": ["Machine Vision", "Mechanical Design", "Process Engineering"],
+    "par": {
+      "problem": "Single-substrate scanning was slow and did not link tray position to downstream performance data.",
+      "action": "Designed and built a linear Data Matrix Code scanning system that captures each substrate's tray position in a single scanner pass across 3 manufacturing processes.",
+      "result": "Reduced substrate scan time by ~90% and enabled tray-position tracking that links substrate location during a process to its performance data."
+    }
+  },
+  {
+    "id": "large-module-photobooth",
+    "category": "Work",
+    "featured": false,
+    "company": "CubicPV Inc.",
+    "title": "Large-Module Photobooth",
+    "year": "2026",
+    "image": "assets/photobooth-image.jpg",
+    "metric": null,
+    "summary": "Converted a photoluminescence box into a multi-mode photobooth for visual characterization of 400mm substrates.",
+    "tags": ["3D Printing", "Mechanical Design", "Characterization"],
+    "par": {
+      "problem": "No production-scale visual characterization tool existed for 400mm substrates.",
+      "action": "Converted a large-area photoluminescence box into a multi-mode photobooth, engineering a 3D-printed lighting mount to block light leakage and diffuse output, and installed dual-illumination with external mode-switching.",
+      "result": "Delivered an operator-ready characterization tool with validated backlight and toplight imaging modes at production scale."
+    }
+  },
+  {
+    "id": "sdc-dmc-scanning",
+    "category": "Work",
+    "featured": false,
+    "company": "CubicPV Inc.",
+    "title": "SDC DMC Scanning System",
+    "year": "2026",
+    "image": null,
+    "metric": null,
+    "summary": "Designed and installed two DMC scanning stations in coaters for automated traceability of coating events.",
+    "tags": ["Machine Vision", "Process Engineering", "Automation"],
+    "par": {
+      "problem": "Coating events were not automatically linked to substrate identity, limiting traceability.",
+      "action": "Designed, installed, and tuned two DMC scanning stations in coaters, iterating hardware based on production team feedback for glass clearance, particle reduction, and scan-success indication.",
+      "result": "Enabled automated traceability of coating events with an operator-ready system shaped by production feedback."
+    }
   },
   {
     "id": "f35-analysis",
+    "category": "Work",
+    "featured": false,
+    "company": "NSIN, U.S. Air Force",
     "title": "F-35 Ground Equipment Cost-Benefit Analysis",
-    "company": "National Security Innovation Network, U.S. Air Force",
     "year": "2021",
+    "image": null,
+    "pdf": "assets/f35-report.pdf",
+    "metric": { "value": "73%", "label": "annual cost reduction" },
+    "summary": "Lead author of an analysis adopted by Luke AFB, saving $20,692.68 (73%) annually.",
     "tags": ["Systems Analysis", "Aerospace", "Technical Writing"],
-    "description": "Lead author of a cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Auxiliary Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base. Recommended strategy was implemented at Luke AFB with planned nationwide rollout."
+    "par": {
+      "problem": "Diverted F-35 aircraft at Gila Bend Auxiliary Airfield required aerospace ground equipment transported from Luke AFB at significant recurring cost.",
+      "action": "Led a cost-benefit analysis of stationing options and authored the final report for the sponsor and program operator.",
+      "result": "Recommended strategy saved $20,692.68 (73%) annually with minimal workload increase, was implemented at Luke AFB, and was slated for nationwide rollout."
+    }
   },
   {
-    "id": "nasa-microg",
-    "title": "NASA Micro-g NExT EVA Tool Attachment",
-    "company": "MEC Team at Berkeley",
+    "id": "icp-prototype",
+    "category": "Work",
+    "featured": false,
+    "company": "CranioView",
+    "title": "Non-Invasive Intracranial Pressure Prototype",
+    "year": "2023",
+    "image": "assets/cranioview.jpg",
+    "metric": null,
+    "summary": "Built a prototype testbed evaluating non-invasive intracranial pressure measurement via ultrasound.",
+    "tags": ["Medical Devices", "Mechatronics", "Prototyping", "Ultrasound"],
+    "par": {
+      "problem": "Measuring intracranial pressure in patients with acute neurologic injury traditionally requires invasive methods.",
+      "action": "Developed a user-friendly SolidWorks prototype to collect patient data and ran end-user interviews against existing solutions.",
+      "result": "Enabled clinical evaluation of a non-invasive ultrasound-based ICP measurement method."
+    }
+  },
+  {
+    "id": "no-pollution",
+    "category": "Work",
+    "featured": false,
+    "company": "No Pollution Industrial Systems",
+    "title": "Production Line Enclosure Systems",
+    "year": "2022",
+    "image": "assets/no-pollution-dry-end.png",
+    "metric": { "value": "1,000+", "label": "components per assembly" },
+    "summary": "Designed bespoke soundproofing, heat-recovery, and climate enclosure systems for cardboard production lines.",
+    "tags": ["SolidWorks", "Mechanical Design", "Assemblies"],
+    "par": {
+      "problem": "Corrugated cardboard production lines needed bespoke enclosure systems for sound, heat recovery, and climate control.",
+      "action": "Designed and modeled the dry-end enclosure in SolidWorks and improved the company's pack-and-go subassembly workflow.",
+      "result": "Produced production-ready master assemblies of 1,000+ components and streamlined the company's subassembly packaging workflow."
+    }
+  },
+  {
+    "id": "adaptive-bike",
+    "category": "Class",
+    "featured": true,
+    "company": "UC Berkeley · ME179",
+    "title": "Adaptive Bike Shift & Brake Mechanism",
+    "year": "2023",
+    "image": "assets/shifter-CAD.png",
+    "video": "assets/Adaptive Road Bike Shifter and Braking Mechanism Demonstration Video.mp4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=WX-xVGZBm2s",
+    "metric": null,
+    "summary": "Adaptive shifters that move actuation from wrist to shoulder for a quadriplegic cyclist.",
+    "tags": ["Assistive Tech", "Mechanical Design", "Prototyping"],
+    "par": {
+      "problem": "Our need-knower with incomplete quadriplegia could not use his handcycle, as braking and shifting required a wrist motion he was weak in.",
+      "action": "Designed, manufactured, and tested a mechanism that shifts actuation from the hand to along the forearm, enabling a shoulder motion instead.",
+      "result": "Won 'Most Likely to be Commercialized' at the Jacobs Showcase."
+    }
+  },
+  {
+    "id": "cling-wrap",
+    "category": "Class",
+    "featured": false,
+    "company": "UC Berkeley · Mechatronics",
+    "title": "Automated Cling Wrap Dispenser",
+    "year": "2023",
+    "image": "assets/cling-wrap.png",
+    "video": "assets/Automated Cling Wrap Dispenser Demonstration Video.mp4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=tQQUfPcJ21Y",
+    "metric": null,
+    "summary": "Built an automated dispenser; managed all electronics and wrote PI controllers in C++ on an ESP32.",
+    "tags": ["Mechatronics", "C++", "Controls", "ESP32"],
+    "par": {
+      "problem": "Manual cling-wrap dispensing is slow and awkward in food prep and storage.",
+      "action": "Built an automated dispenser, managing motors, drivers, and analog/digital sensors and writing PI controllers for the arm and slicer in C++.",
+      "result": "Produced a fully functional automated dispenser driven by an ESP32 microcontroller with closed-loop motor control."
+    }
+  },
+  {
+    "id": "greenaction-climate",
+    "category": "Class",
+    "featured": false,
+    "company": "UC Berkeley · ENGIN 157AC",
+    "title": "Climate Change & Contamination Report",
     "year": "2021",
-    "tags": ["NASA", "Mechanical Design", "FEA", "Space Systems"],
-    "description": "Designed, proposed, and manufactured an EVA tool attachment mechanism for astronaut utility belts for NASA's Micro-g NExT Challenge. Utilized FEA, FMEA Risk Matrix, Compliance Matrix, and Trade Study Pugh Chart. Selected for Phase 2 testing at NASA's Neutral Buoyancy Lab."
+    "image": null,
+    "pdf": "assets/GreenBOTZ Final Report.pdf",
+    "metric": null,
+    "summary": "Co-authored a report for Greenaction for Health and Environmental Justice detailing how climate change will exacerbate historical contamination in the San Francisco Bay Area.",
+    "tags": ["Environmental Justice", "Technical Writing", "Research"],
+    "par": {
+      "problem": "Climate change processes such as sea-level rise and groundwater rise threaten to reactivate historically contaminated sites across the San Francisco Bay Area, but the intersection of these risks was not well documented for advocacy.",
+      "action": "As a research intern with Greenaction, co-authored a four-case-study report; primary author of the Bayview Hunters Point case study covering the site's radiological and industrial contamination history, health impacts, cleanup fraud, and ongoing environmental injustice.",
+      "result": "Report adopted by Greenaction to advocate for government and press attention to contamination cleanup before climate change worsens its effects on vulnerable communities."
+    }
+  },
+  {
+    "id": "wind-turbine",
+    "category": "Class",
+    "featured": false,
+    "company": "University of Edinburgh",
+    "title": "Model Wind Turbine",
+    "year": "2022",
+    "image": "assets/model-wind-turbine.png",
+    "metric": { "value": "10 W", "label": "regulated output at 5.5 V" },
+    "summary": "Designed a model turbine and the AC-DC circuitry to deliver constant regulated power.",
+    "tags": ["Power Electronics", "Sustainable Energy", "Design"],
+    "par": {
+      "problem": "The brief required a constant 10 W at 5.5 V across wind speeds of 10–20 m/s.",
+      "action": "Contributed to the overall design and built the circuitry converting generator AC to regulated DC.",
+      "result": "Achieved constant 10 W regulated output at 5.5 V across the full 10–20 m/s wind speed range."
+    }
+  },
+  {
+    "id": "rabet",
+    "category": "Club",
+    "featured": true,
+    "company": "MEC Team at Berkeley · NASA",
+    "title": "NASA Micro-g NExT RABeT System",
+    "year": "2021",
+    "image": "assets/RABeT.png",
+    "pdf": "assets/Micro-g NExT Proposal.pdf",
+    "metric": { "value": "NBL", "label": "tested at NASA's Neutral Buoyancy Lab" },
+    "summary": "Designed a one-handed EVA tool attachment for astronaut utility belts, tested by NASA at the NBL.",
+    "tags": ["NASA", "FEA", "Mechanical Design", "Space Systems"],
+    "par": {
+      "problem": "NASA's Micro-g NExT challenge sought a quick-release system letting astronauts attach EVA tools to their utility belt.",
+      "action": "Designed, proposed, and manufactured the Rapid Attachment Belt and Tool system for blind, one-handed operation; served as Editor-in-Chief of the technical report using FEA, FMEA, and trade studies.",
+      "result": "Selected for Phase 2 and tested at NASA's Neutral Buoyancy Laboratory, noted for intuitive design and resilience to lunar regolith."
+    }
+  },
+  {
+    "id": "endeavour-recovery",
+    "category": "Club",
+    "featured": false,
+    "company": "Endeavour Rocketry",
+    "title": "Rocket Recovery System",
+    "year": "2022",
+    "image": "assets/endeavour.png",
+    "metric": { "value": "9 km", "label": "target apogee" },
+    "summary": "Designed a black-powderless CO2 recovery system and modeled descent dynamics in MATLAB.",
+    "tags": ["Aerospace", "MATLAB", "Mechanical Design"],
+    "par": {
+      "problem": "The team's 9 km rocket needed a recovery system to replace the prior black-powder approach.",
+      "action": "Designed a motor-driven lead-screw mechanism puncturing a CO2 canister to deploy the parachutes, and modeled descent characteristics in MATLAB to size the drogue and main chutes.",
+      "result": "Recovery system validated with correctly sized drogue and main chutes for the rocket's descent profile."
+    }
+  },
+  {
+    "id": "emissions-code",
+    "category": "Personal",
+    "featured": true,
+    "company": "Berkeley Study Abroad",
+    "title": "Flight Emissions Automation",
+    "year": "2021",
+    "image": null,
+    "metric": { "value": "<10 s", "label": "down from 15+ minutes" },
+    "summary": "Automated a hundreds-of-hours emissions task; cut runtime from 15+ minutes to under 10 seconds.",
+    "tags": ["Python", "Algorithms", "Automation"],
+    "par": {
+      "problem": "Calculating emissions for thousands of study-abroad student flights would have taken hundreds of hours by hand.",
+      "action": "Automated the calculation using airport latitude/longitude lookups, then implemented a binary search to replace a 15-minute-per-iteration linear scan.",
+      "result": "Cut runtime to under 10 seconds, completing in seconds what would have taken hundreds of hours."
+    }
+  },
+  {
+    "id": "water-rocket",
+    "category": "Personal",
+    "featured": false,
+    "company": "Personal Build",
+    "title": "High-Pressure Water Rocket Launcher",
+    "year": "2020",
+    "image": "assets/water-bottle-rocket-launcher.png",
+    "video": "assets/Water Bottle Rocket Initial Test 80psi.mp4",
+    "metric": { "value": "~300 ft", "label": "estimated apogee" },
+    "summary": "Built an 80 psi water-rocket launcher and flew an onboard camera to estimate a 300 ft apogee.",
+    "tags": ["Fabrication", "Pneumatics", "Build"],
+    "par": {
+      "problem": "Wanted a high-powered, reusable water-rocket platform.",
+      "action": "Designed and built a launcher pressurized to 80 psi and flew an onboard camera for flight data.",
+      "result": "Estimated a ~300 ft apogee using the onboard footage and a field reference."
+    }
+  },
+  {
+    "id": "nerf-cannon",
+    "category": "Personal",
+    "featured": false,
+    "company": "Physics Project",
+    "title": "Burst-Disk Nerf Air Cannon",
+    "year": "2019",
+    "image": "assets/nerf-air-cannon.png",
+    "video": "assets/Air Cannon Watermelon Video.mp4",
+    "metric": null,
+    "summary": "Designed a burst-disk pneumatic cannon reaching velocities that required reinforcing the projectiles.",
+    "tags": ["Pneumatics", "Fabrication", "Build"],
+    "par": {
+      "problem": "A physics project called for a high-velocity projectile launcher.",
+      "action": "Built a pressure chamber and barrel separated by a plastic burst disk, pressurizing to a few hundred psi before release.",
+      "result": "Air velocity was high enough that Nerf darts had to be reinforced with tape; metal hex drivers embedded inches into a wooden backstop."
+    }
+  },
+  {
+    "id": "coffee-table",
+    "category": "Personal",
+    "featured": false,
+    "company": "Personal Build",
+    "title": "Designed & Built Coffee Table",
+    "year": "2020",
+    "image": "assets/Coffee-table.jpg",
+    "metric": null,
+    "summary": "Modeled a coffee table in SolidWorks from spare lumber, then built, stained, and finished it.",
+    "tags": ["SolidWorks", "Woodworking", "Design"],
+    "par": {
+      "problem": "Wanted a coffee table for my apartment using leftover wood.",
+      "action": "Modeled the design in SolidWorks, then built, stained, and applied a protective finish.",
+      "result": "Used the table throughout the rest of my undergraduate program."
+    }
   }
 ]

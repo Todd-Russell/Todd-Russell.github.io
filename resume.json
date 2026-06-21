@@ -1,16 +1,16 @@
 {
   "name": "Todd Russell",
   "title": "Mechanical Engineer",
-  "tagline": "Mechatronics · Automation · Precision Manufacturing · Solar Technology",
+  "tagline": "Multidisciplinary mechanical, mechatronics, and process engineer solving complex problems across automation, machine vision, and precision manufacturing, from R&D through production.",
   "location": "Boston, MA",
   "email": "ToddRussell@proton.me",
-  "linkedin": "https://www.linkedin.com/in/todd-russell-7ab2b01a8/",
-  "summary": "Engineer who fuses a passion for mechatronics and design with a drive to push the boundaries of what is possible. Thrive solving complex problems in novel ways.",
+  "linkedin": "https://www.linkedin.com/in/todd--russell/",
+  "resumePdf": "https://img1.wsimg.com/blobby/go/8cb1a4d5-5637-418d-9277-8c08fd7527d9/Todd_Russell_Resume.pdf",
+  "descriptors": ["Eagle Scout", "Runner", "Scuba Diver"],
   "stats": [
-    { "value": "500%", "label": "Throughput Increase" },
-    { "value": "70%",  "label": "Positional Variation Reduced" },
-    { "value": "35×",  "label": "Degradation Lifespan Improved" },
-    { "value": "24%",  "label": "World-Record Module Efficiency" }
+    { "value": "24%",  "label": "World-Record Module Efficiency" },
+    { "value": "500%", "label": "Laser Scribing Throughput Gain" },
+    { "value": "35×",  "label": "Module Degradation Lifespan Improved" }
   ],
   "experience": [
     {
@@ -19,11 +19,11 @@
       "period": "Oct 2023 – Present",
       "location": "Bedford, MA",
       "highlights": [
-        "Drove 34% improvement in initial module efficiency and 35× improvement in module degradation lifespan as lead of module development.",
-        "Achieved world-record 24% perovskite module efficiency through joint development with NREL.",
-        "Increased laser scribing throughput by 500%, yield by 5%, and reduced positional repeatability from 60μm to 20μm through automation and machine vision integration.",
-        "Reduced total positional variation throughout the production line by 70% via targeted mechanical and process improvements.",
-        "Spearheaded company-wide defect tracking initiative — identified two defects present on 50% of modules causing 20× degradation impact."
+        "Started as an intern and was promoted to Engineer II, then Engineer III, within one year.",
+        "Drove a 35% relative improvement in initial module efficiency and a 35× improvement in module degradation lifespan as lead of module development, owning all loss mechanisms related to modulization of the solar cell.",
+        "Achieved a world-record 24.0% efficiency perovskite module through joint development with NREL.",
+        "Increased laser scribing throughput by 500% and yield by 5% and improved 6σ positional repeatability from 60μm to 20μm through automation and machine vision integration.",
+        "Spearheaded a company-wide defect tracking initiative, identifying two defect types present on 50% of modules driving 20× the degradation impact of all other categories combined."
       ]
     },
     {
@@ -32,39 +32,59 @@
       "period": "May 2023 – Sep 2023",
       "location": "Los Angeles, CA",
       "highlights": [
-        "Developed user-friendly prototype to collect patient data and evaluate a groundbreaking non-invasive method of measuring intracranial pressure via ultrasound in patients with acute neurologic injury."
+        "Developed a user-friendly prototype to collect patient data and evaluate a non-invasive method of measuring intracranial pressure via ultrasound in patients with acute neurologic injury.",
+        "Conducted end-user interviews comparing existing solutions to inform design decisions."
       ]
     },
     {
       "company": "No Pollution Industrial Systems Ltd.",
       "role": "Mechanical Engineering Design Intern",
-      "period": "May 2022 – July 2022",
+      "period": "May 2022 – Jul 2022",
       "location": "Edinburgh, UK",
       "highlights": [
-        "Designed and modeled bespoke soundproofing, heat recovery, and controlled climate enclosure systems in SolidWorks.",
-        "Built master assemblies composed of thousands of components nested within subassemblies.",
-        "Improved the company's pack-and-go subassembly system to streamline workflow."
+        "Designed and modeled bespoke soundproofing, heat recovery, and controlled climate enclosure systems in SolidWorks for corrugated cardboard production lines.",
+        "Built master assemblies of 1,000+ individual components nested within subassemblies and improved the company's pack-and-go subassembly workflow."
       ]
     },
     {
       "company": "National Security Innovation Network, U.S. Air Force",
       "role": "Research Fellow",
-      "period": "June 2021 – Aug 2021",
+      "period": "Jun 2021 – Aug 2021",
       "location": "Phoenix, AZ",
       "highlights": [
-        "Lead author of cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base.",
-        "Recommended strategy was implemented at Luke AFB with planned nationwide rollout."
+        "Lead author of a cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Auxiliary Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base.",
+        "Recommended strategy yielded a net annual saving of $20,692.68 (73%) and was implemented at Luke AFB with planned nationwide rollout."
+      ]
+    },
+    {
+      "company": "Greenaction for Health and Environmental Justice",
+      "role": "Research Intern",
+      "period": "Jan 2021 – May 2021",
+      "location": "San Francisco Bay Area, CA",
+      "highlights": [
+        "Co-authored a report detailing how climate change processes including sea-level rise and groundwater rise will reactivate historically contaminated sites across the San Francisco Bay Area.",
+        "Primary researcher and author of the Bayview Hunters Point case study, covering decades of radiological and industrial contamination from the Hunters Point Naval Shipyard, the Tetra Tech data-falsification scandal, and ongoing environmental injustice.",
+        "Report adopted by Greenaction to advocate for government and press action on contamination cleanup before climate change worsens its effects on vulnerable communities."
+      ]
+    },
+    {
+      "company": "Endeavour Rocketry",
+      "role": "Recovery Engineer",
+      "period": "Oct 2021 – May 2022",
+      "location": "Edinburgh, UK",
+      "highlights": [
+        "Developed a black-powderless recovery system for the team's 9 km rocket, designing a motor-driven lead-screw mechanism to puncture a CO2 canister for parachute deployment.",
+        "Modeled descent characteristics under varying parachute parameters using MATLAB to size the drogue and main chutes."
       ]
     },
     {
       "company": "Mechanical Engineering Competition Team at Berkeley",
       "role": "Mechanical Engineer",
-      "period": "Sep 2020 – July 2021",
+      "period": "Sep 2020 – Jul 2021",
       "location": "Berkeley, CA",
       "highlights": [
         "Designed, proposed, and manufactured an EVA tool attachment mechanism for astronaut utility belts for NASA's Micro-g NExT Challenge.",
-        "Editor-in-Chief of technical report utilizing Compliance Matrix, FEA, FMEA Risk Matrix, and Trade Study Pugh Chart.",
-        "Selected for Phase 2 — design was manufactured, tested, and evaluated at NASA's Neutral Buoyancy Lab."
+        "Editor-in-Chief of the technical report; selected for Phase 2 and tested at NASA's Neutral Buoyancy Laboratory."
       ]
     }
   ],
@@ -85,11 +105,32 @@
       "school": "University of Edinburgh",
       "degree": "Study Abroad — Mechanical Engineering",
       "period": "Sep 2021 – May 2022",
-      "details": "Control of UAVs · Mechatronics Design · Manufacturing & Tolerancing · Control Systems Engineering"
+      "details": ""
     }
   ],
+  "highlightedCoursework": [
+    "Augmenting Human Dexterity", "Control of UAVs", "Manufacturing and Tolerancing",
+    "Mechatronics Design", "Semiconductor Manufacturing"
+  ],
+  "coursework": [
+    "3D Modeling for Design", "Astrobiology", "Astrophysics", "Augmenting Human Dexterity",
+    "Control of UAVs", "Control Systems Engineering", "Electronics for the IoT", "Engineering Mechanics",
+    "Engineering, Environment, and Society", "Engineering Leadership", "Experimentation and Measurements",
+    "Fluid Mechanics", "Heat Transfer", "Living Materials and their Biomaterial Replacements",
+    "Manufacturing and Tolerancing", "Marine Energy", "Mechanical Behavior of Engineering Materials",
+    "Mechatronics Design", "Ocean-Environment Mechanics", "Semiconductor Manufacturing",
+    "Solar Thermal Engineering", "Sustainable Energy Design", "Thermodynamics"
+  ],
   "skills": {
-    "Software": ["MATLAB", "Python", "C++", "Arduino", "LabVIEW", "Simulink", "AutoCAD", "SolidWorks", "GitHub"],
-    "Engineering": ["Mechatronics", "Machine Vision", "Laser Systems", "CAD / GD&T", "Control Theory (PIDs)", "Electromechanical Design", "Rapid Prototyping", "3D Printing", "DAQ & Analysis", "Iterative Design", "Mechanical Design", "Tolerance Analysis"]
-  }
+    "Software": ["SolidWorks", "Python", "MATLAB", "C++", "Arduino", "LabVIEW", "GitHub", "JMP", "Simulink", "AutoCAD"],
+    "Engineering": ["Mechanical Design", "Machine Vision", "Laser Systems", "Mechatronics", "CAD / GD&T", "Electromechanical Design", "3D Printing", "Rapid Prototyping", "Tolerance Analysis", "Control Theory (PIDs)", "DAQ & Analysis", "Iterative Design"]
+  },
+  "publications": [
+    {
+      "title": "C60-based ionic salt electron shuttle for high-performance inverted perovskite solar modules",
+      "venue": "Science, Vol. 388, No. 6750, pp. 964–968",
+      "year": "2025",
+      "url": "https://doi.org/10.1126/science.adv4701"
+    }
+  ]
 }
