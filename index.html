@@ -101,7 +101,8 @@
   .spot-sum{color:#3b424b;font-size:0.98rem;margin-bottom:1rem}
 
   /* grid */
-  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem}
+  .proj-grid{display:flex;gap:1.3rem}
+  .proj-col{flex:1;display:flex;flex-direction:column;gap:1.3rem}
   .pcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:border-color .15s,transform .15s}
   .pcard.expandable{cursor:pointer}
   .pcard.expandable:hover{border-color:var(--accent);transform:translateY(-2px)}
@@ -131,7 +132,8 @@
   .additional-toggle:hover{background:var(--accent);color:#fff;transform:translateY(-1px)}
   .additional-toggle .at-ic{display:inline-flex;width:16px;height:16px;align-items:center;justify-content:center;border:1px solid var(--accent);border-radius:3px;font-size:0.7rem;transition:transform .2s}
   .additional-toggle.open .at-ic{transform:rotate(45deg)}
-  .additional-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;overflow:hidden;max-height:0;transition:max-height .4s ease;margin-top:0}
+  .additional-grid{display:flex;gap:1.3rem;overflow:hidden;max-height:0;transition:max-height .4s ease;margin-top:0}
+  .additional-grid .proj-col{flex:1;display:flex;flex-direction:column;gap:1.3rem}
   .additional-grid.open{max-height:4000px;margin-top:1.3rem}
 
   /* IMAGE COMPARE SLIDER */
@@ -188,8 +190,8 @@
     .stat{border-right:none;border-bottom:1px solid var(--line)}
     .stat:last-child{border-bottom:none}
     .spotlight .spot-visual{min-height:220px}
-    .proj-grid{grid-template-columns:1fr}
-    .additional-grid{grid-template-columns:1fr}
+    .proj-grid{flex-direction:column}
+    .additional-grid{flex-direction:column}
   }
 </style>
 </head>
@@ -336,11 +338,13 @@
     const featured = main.find(p=>p.featured) || main[0] || null;
     const rest = main.filter(p=>p!==featured).sort((a,b)=>parseInt(b.year)-parseInt(a.year));
     document.getElementById('proj-spotlight').innerHTML = featured ? spotlightCard(featured) : '';
-    document.getElementById('proj-grid').innerHTML = rest.map(gridCard).join('');
+    const colL = rest.filter((_,i)=>i%2===0), colR = rest.filter((_,i)=>i%2===1);
+    document.getElementById('proj-grid').innerHTML = `<div class="proj-col">${colL.map(gridCard).join('')}</div><div class="proj-col">${colR.map(gridCard).join('')}</div>`;
     const addEl = document.getElementById('proj-additional');
     if (additional.length){
       additional.sort((a,b)=>parseInt(b.year)-parseInt(a.year));
-      addEl.innerHTML = `<div class="additional-wrap"><button class="additional-toggle" id="additional-toggle"><span>Additional CubicPV Projects (${additional.length})</span><span class="at-ic">+</span></button><div class="additional-grid" id="additional-grid">${additional.map(gridCard).join('')}</div></div>`;
+      const addL = additional.filter((_,i)=>i%2===0), addR = additional.filter((_,i)=>i%2===1);
+      addEl.innerHTML = `<div class="additional-wrap"><button class="additional-toggle" id="additional-toggle"><span>Additional CubicPV Projects (${additional.length})</span><span class="at-ic">+</span></button><div class="additional-grid" id="additional-grid"><div class="proj-col">${addL.map(gridCard).join('')}</div><div class="proj-col">${addR.map(gridCard).join('')}</div></div></div>`;
       document.getElementById('additional-toggle').addEventListener('click',function(){
         this.classList.toggle('open');
         document.getElementById('additional-grid').classList.toggle('open');
