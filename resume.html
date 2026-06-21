@@ -181,8 +181,7 @@
     <div class="sec-head reveal">
       <div class="sec-eyebrow">Resume &amp; Background</div>
       <h2 class="sec-title">Experience, Education &amp; Skills</h2>
-      <div style="margin-top:1rem"><a id="resume-pdf" class="btn-outline" target="_blank" rel="noopener noreferrer" style="font-size:0.82rem;padding:0.55rem 1.1rem">Download Resume</a></div>
-      <div class="sec-rule" style="margin-top:1.5rem"></div>
+      <div class="sec-rule" style="margin-top:1rem"></div>
     </div>
   </div>
 </section>
@@ -306,8 +305,6 @@
     try{
       const {resume} = await loadData();
       renderHero(resume); renderStats(resume.stats);
-      const rb = document.getElementById('resume-pdf');
-      if (resume.resumePdf){ rb.href = resume.resumePdf; } else { rb.style.display='none'; }
       renderExperience(resume.experience);
       renderEducation(resume.education, resume.coursework, resume.highlightedCoursework);
       renderSkills(resume.skills);
