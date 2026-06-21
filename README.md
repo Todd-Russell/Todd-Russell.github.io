@@ -15,6 +15,42 @@ todd-russell.github.io/portfolio
 
 All content lives in the two JSON files. The HTML rarely needs to change for content updates.
 
+## Build & validate (run before every commit)
+
+The site is **pre-rendered**: `index.html` and `resume.html` ship with the real
+content baked into the HTML so search engines, social link previews, and applicant
+tracking systems see a full page even without running JavaScript. The browser then
+"hydrates" from the same data for the interactive bits (tabs, expandable cards, the
+CAD/build slider).
+
+After editing `resume.json` or `projects.json`, regenerate the pages:
+
+```
+cd portfolio
+node build.js
+```
+
+`build.js` will:
+1. **Validate both JSON files** with `python -m json.tool` and abort if either is
+   invalid, so a broken file can never be committed.
+2. Re-render every section into the static HTML.
+3. Inline the JSON for fast hydration.
+
+If you only want the parse check without rebuilding:
+
+```
+python -m json.tool resume.json  > /dev/null && echo OK
+python -m json.tool projects.json > /dev/null && echo OK
+```
+
+Then commit `index.html`, `resume.html`, `render.js`, `build.js`, the two JSON files,
+and `assets/`. Do **not** hand-edit the content inside the `<!--SSR:...-->` fences in
+the HTML; edit the JSON and re-run `node build.js`.
+
+### How the rendering is shared
+`render.js` holds the single set of HTML builders used by **both** the browser and
+`build.js`, so there is no duplicate render logic to keep in sync.
+
 ## Local preview
 
 Serve the folder over HTTP, then open the local URL:
@@ -87,3 +123,5 @@ Body:
 ```
 
 GitHub Pages auto-deploys within ~30 seconds of each commit.
+
+> Reminder: run `node build.js` (which runs the JSON parse check and re-renders) before committing.

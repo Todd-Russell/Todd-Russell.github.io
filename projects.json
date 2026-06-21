@@ -146,12 +146,12 @@
     "image": null,
     "pdf": "assets/f35-report.pdf",
     "metric": { "value": "73%", "label": "annual cost reduction" },
-    "summary": "Lead author of an analysis adopted by Luke AFB, saving $20,692.68 (73%) annually.",
+    "summary": "Lead author of an analysis adopted by Luke AFB, saving $20,700 (73%) annually.",
     "tags": ["Systems Analysis", "Aerospace", "Technical Writing"],
     "par": {
       "problem": "Diverted F-35 aircraft at Gila Bend Auxiliary Airfield required aerospace ground equipment transported from Luke AFB at significant recurring cost.",
       "action": "Led a cost-benefit analysis of stationing options and authored the final report for the sponsor and program operator.",
-      "result": "Recommended strategy saved $20,692.68 (73%) annually with minimal workload increase, was implemented at Luke AFB, and was slated for nationwide rollout."
+      "result": "Recommended strategy saved $20,700 (73%) annually with minimal workload increase, was implemented at Luke AFB, and was slated for nationwide rollout."
     }
   },
   {

@@ -5,7 +5,7 @@
   "location": "Boston, MA",
   "email": "ToddRussell@proton.me",
   "linkedin": "https://www.linkedin.com/in/todd--russell/",
-  "resumePdf": "https://img1.wsimg.com/blobby/go/8cb1a4d5-5637-418d-9277-8c08fd7527d9/Todd_Russell_Resume.pdf",
+  "resumePdf": "assets/Todd_Russell_Resume.pdf",
   "descriptors": ["Eagle Scout", "Runner", "Scuba Diver"],
   "stats": [
     { "value": "24%",  "label": "World-Record Module Efficiency" },
@@ -21,7 +21,7 @@
       "highlights": [
         "Started as an intern and was promoted to Engineer II, then Engineer III, within one year.",
         "Drove a 35% relative improvement in initial module efficiency and a 35× improvement in module degradation lifespan as lead of module development, owning all loss mechanisms related to modulization of the solar cell.",
-        "Achieved a world-record 24.0% efficiency perovskite module through joint development with NREL.",
+        "Achieved a world-record 24.0% efficiency perovskite module through joint development with NLR (formerly NREL).",
         "Increased laser scribing throughput by 500% and yield by 5% and improved 6σ positional repeatability from 60μm to 20μm through automation and machine vision integration.",
         "Spearheaded a company-wide defect tracking initiative, identifying two defect types present on 50% of modules driving 20× the degradation impact of all other categories combined."
       ]
@@ -53,7 +53,7 @@
       "location": "Phoenix, AZ",
       "highlights": [
         "Lead author of a cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Auxiliary Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base.",
-        "Recommended strategy yielded a net annual saving of $20,692.68 (73%) and was implemented at Luke AFB with planned nationwide rollout."
+        "Recommended strategy yielded a net annual saving of $20,700 (73%) and was implemented at Luke AFB with planned nationwide rollout."
       ]
     },
     {

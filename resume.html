@@ -5,6 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Todd Russell — Resume &amp; Background</title>
 <meta name="description" content="Experience, education, and skills of Todd Russell — mechanical, mechatronics, and process engineer.">
+<link rel="canonical" href="https://todd-russell.github.io/resume.html">
+<meta name="author" content="Todd Russell">
+<meta name="theme-color" content="#1f4fd1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Todd Russell — Engineering Portfolio">
+<meta property="og:title" content="Todd Russell — Resume & Background">
+<meta property="og:description" content="Mechanical, mechatronics, and process engineer. Led a world-record 24% efficiency perovskite module (published in Science, 2025) and delivered 500% laser-scribing throughput gains.">
+<meta property="og:url" content="https://todd-russell.github.io/resume.html">
+<meta property="og:image" content="https://todd-russell.github.io/assets/og-image.jpg">
+<meta property="og:image:secure_url" content="https://todd-russell.github.io/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Todd Russell, Mechanical Engineer — world-record 24% efficiency perovskite module">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Todd Russell — Resume & Background">
+<meta name="twitter:description" content="Mechanical, mechatronics, and process engineer. Led a world-record 24% efficiency perovskite module (published in Science, 2025) and delivered 500% laser-scribing throughput gains.">
+<meta name="twitter:image" content="https://todd-russell.github.io/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="Todd Russell, Mechanical Engineer">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Todd Russell","jobTitle":"Mechanical Engineer","email":"mailto:ToddRussell@proton.me","url":"https://todd-russell.github.io/","image":"https://todd-russell.github.io/assets/og-image.jpg","address":{"@type":"PostalAddress","addressLocality":"Boston","addressRegion":"MA","addressCountry":"US"},"sameAs":["https://www.linkedin.com/in/todd--russell/","https://doi.org/10.1126/science.adv4701"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Northeastern University"},{"@type":"CollegeOrUniversity","name":"University of California, Berkeley"},{"@type":"CollegeOrUniversity","name":"University of Edinburgh"}],"worksFor":{"@type":"Organization","name":"CubicPV Inc."},"knowsAbout":["Mechanical Design","Mechatronics","Machine Vision","Process Engineering","Perovskite Solar Modules","SolidWorks","Automation"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -135,7 +158,7 @@
   }
   @media(max-width:820px){
     .nav-links{gap:1rem}
-    .nav-links a:not(.nav-cta){display:none}
+    
     .stats-inner{grid-template-columns:1fr}
     .stat{border-right:none;border-bottom:1px solid var(--line)}
     .stat:last-child{border-bottom:none}
@@ -143,18 +166,37 @@
     .edu-grid{grid-template-columns:1fr}
     .skills-grid{grid-template-columns:1fr}
   }
+
+  /* --- resume link + mobile hamburger + slider focus (added) --- */
+  .nav-links a.nav-resume{color:var(--accent)}
+  .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:38px;background:none;border:1px solid var(--line2);border-radius:6px;cursor:pointer;padding:0 9px}
+  .nav-toggle span{display:block;height:2px;width:100%;background:var(--ink);border-radius:2px;transition:transform .2s,opacity .2s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .compare-handle:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  @media(max-width:820px){
+    .nav-toggle{display:flex}
+    .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(246,246,242,0.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0.6rem 2rem 1.1rem;gap:0.1rem;max-height:0;overflow:hidden;transition:max-height .28s ease}
+    .nav-links.open{max-height:560px}
+    .nav-links a{display:block;padding:0.7rem 0;font-size:0.8rem}
+    .nav-links a.nav-cta{display:inline-block;text-align:center;margin-top:0.5rem;padding:0.6rem 0.9rem}
+  }
+
 </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="nav-mark">Todd Russell<b>.</b></a>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#publications">Publications</a></li>
+    <li><a href="assets/Todd_Russell_Resume.pdf" class="nav-resume" id="nav-resume" download>Resume &darr;</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
@@ -165,43 +207,43 @@
     <div class="hero-eyebrow">Mechanical Design · Mechatronics · Process Engineering</div>
     <h1 class="hero-name">Todd<br>Russell<b>.</b></h1>
     <div class="hero-rule"></div>
-    <p class="hero-tagline" id="hero-tagline"></p>
-    <div class="hero-desc" id="hero-desc"></div>
+    <p class="hero-tagline" id="hero-tagline"><!--SSR:hero-tagline:START-->Multidisciplinary mechanical, mechatronics, and process engineer solving complex problems across automation, machine vision, and precision manufacturing, from R&amp;D through production.<!--SSR:hero-tagline:END--></p>
+    <div class="hero-desc" id="hero-desc"><!--SSR:hero-desc:START--><span>Eagle Scout</span><span>Runner</span><span>Scuba Diver</span><!--SSR:hero-desc:END--></div>
     <div class="hero-cta">
       <a href="index.html#projects" class="btn-primary">View Work</a>
-      <a href="#experience" class="btn-outline">Resume &amp; Background</a>
+      <a href="assets/Todd_Russell_Resume.pdf" class="btn-outline" id="hero-resume" download>Download Resume (PDF)</a>
     </div>
   </div>
 </section>
 
-<div class="stats-bar"><div class="stats-inner" id="stats-bar"></div></div>
+<div class="stats-bar"><div class="stats-inner" id="stats-bar"><!--SSR:stats:START--><div class="stat"><div class="stat-value">24%</div><div class="stat-label">World-Record Module Efficiency</div></div><div class="stat"><div class="stat-value">500%</div><div class="stat-label">Laser Scribing Throughput Gain</div></div><div class="stat"><div class="stat-value">35×</div><div class="stat-label">Module Degradation Lifespan Improved</div></div><!--SSR:stats:END--></div></div>
 
 <section class="block" id="experience">
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-eyebrow">Career</div><h2 class="sec-title">Experience</h2><div class="sec-rule"></div></div>
-    <div id="exp-list"></div>
+    <div id="exp-list"><!--SSR:experience:START--><div class="exp-item reveal"><div><div class="exp-co">CubicPV Inc.</div><div class="exp-period">Oct 2023 – Present</div><div class="exp-loc">Bedford, MA</div></div><div><div class="exp-role">Engineer III</div><ul class="exp-bullets"><li>Started as an intern and was promoted to Engineer II, then Engineer III, within one year.</li><li>Drove a 35% relative improvement in initial module efficiency and a 35× improvement in module degradation lifespan as lead of module development, owning all loss mechanisms related to modulization of the solar cell.</li><li>Achieved a world-record 24.0% efficiency perovskite module through joint development with NLR (formerly NREL).</li><li>Increased laser scribing throughput by 500% and yield by 5% and improved 6σ positional repeatability from 60μm to 20μm through automation and machine vision integration.</li><li>Spearheaded a company-wide defect tracking initiative, identifying two defect types present on 50% of modules driving 20× the degradation impact of all other categories combined.</li></ul></div></div><div class="exp-item reveal"><div><div class="exp-co">CranioView</div><div class="exp-period">May 2023 – Sep 2023</div><div class="exp-loc">Los Angeles, CA</div></div><div><div class="exp-role">R&amp;D Mechanical Engineering Intern</div><ul class="exp-bullets"><li>Developed a user-friendly prototype to collect patient data and evaluate a non-invasive method of measuring intracranial pressure via ultrasound in patients with acute neurologic injury.</li><li>Conducted end-user interviews comparing existing solutions to inform design decisions.</li></ul></div></div><div class="exp-item reveal"><div><div class="exp-co">No Pollution Industrial Systems Ltd.</div><div class="exp-period">May 2022 – Jul 2022</div><div class="exp-loc">Edinburgh, UK</div></div><div><div class="exp-role">Mechanical Engineering Design Intern</div><ul class="exp-bullets"><li>Designed and modeled bespoke soundproofing, heat recovery, and controlled climate enclosure systems in SolidWorks for corrugated cardboard production lines.</li><li>Built master assemblies of 1,000+ individual components nested within subassemblies and improved the company&#39;s pack-and-go subassembly workflow.</li></ul></div></div><div class="exp-item reveal"><div><div class="exp-co">National Security Innovation Network, U.S. Air Force</div><div class="exp-period">Jun 2021 – Aug 2021</div><div class="exp-loc">Phoenix, AZ</div></div><div><div class="exp-role">Research Fellow</div><ul class="exp-bullets"><li>Lead author of a cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Auxiliary Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base.</li><li>Recommended strategy yielded a net annual saving of $20,700 (73%) and was implemented at Luke AFB with planned nationwide rollout.</li></ul></div></div><div class="exp-item reveal"><div><div class="exp-co">Greenaction for Health and Environmental Justice</div><div class="exp-period">Jan 2021 – May 2021</div><div class="exp-loc">San Francisco Bay Area, CA</div></div><div><div class="exp-role">Research Intern</div><ul class="exp-bullets"><li>Co-authored a report detailing how climate change processes including sea-level rise and groundwater rise will reactivate historically contaminated sites across the San Francisco Bay Area.</li><li>Primary researcher and author of the Bayview Hunters Point case study, covering decades of radiological and industrial contamination from the Hunters Point Naval Shipyard, the Tetra Tech data-falsification scandal, and ongoing environmental injustice.</li><li>Report adopted by Greenaction to advocate for government and press action on contamination cleanup before climate change worsens its effects on vulnerable communities.</li></ul></div></div><div class="exp-item reveal"><div><div class="exp-co">Endeavour Rocketry</div><div class="exp-period">Oct 2021 – May 2022</div><div class="exp-loc">Edinburgh, UK</div></div><div><div class="exp-role">Recovery Engineer</div><ul class="exp-bullets"><li>Developed a black-powderless recovery system for the team&#39;s 9 km rocket, designing a motor-driven lead-screw mechanism to puncture a CO2 canister for parachute deployment.</li><li>Modeled descent characteristics under varying parachute parameters using MATLAB to size the drogue and main chutes.</li></ul></div></div><div class="exp-item reveal"><div><div class="exp-co">Mechanical Engineering Competition Team at Berkeley</div><div class="exp-period">Sep 2020 – Jul 2021</div><div class="exp-loc">Berkeley, CA</div></div><div><div class="exp-role">Mechanical Engineer</div><ul class="exp-bullets"><li>Designed, proposed, and manufactured an EVA tool attachment mechanism for astronaut utility belts for NASA&#39;s Micro-g NExT Challenge.</li><li>Editor-in-Chief of the technical report; selected for Phase 2 and tested at NASA&#39;s Neutral Buoyancy Laboratory.</li></ul></div></div><!--SSR:experience:END--></div>
   </div>
 </section>
 
 <section class="block" id="education" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-eyebrow">Background</div><h2 class="sec-title">Education</h2><div class="sec-rule"></div></div>
-    <div class="edu-grid" id="edu-grid"></div>
-    <div class="coursework reveal" id="coursework"></div>
+    <div class="edu-grid" id="edu-grid"><!--SSR:edu-grid:START--><div class="edu-card reveal"><div class="edu-school">Northeastern University</div><div class="edu-degree">M.S. Mechanical Engineering · Certificate of Engineering Leadership</div><div class="edu-period">Sep 2023 – May 2025</div><div class="edu-details">Gordon Fellow, Gordon Institute of Engineering Leadership</div></div><div class="edu-card reveal"><div class="edu-school">University of California, Berkeley</div><div class="edu-degree">B.S. Mechanical Engineering</div><div class="edu-period">Aug 2019 – May 2023</div><div class="edu-details">GPA 3.89 / 4.0 · Cum Laude (Top 10%) · Dean&#39;s List, College of Engineering</div></div><div class="edu-card reveal"><div class="edu-school">University of Edinburgh</div><div class="edu-degree">Study Abroad — Mechanical Engineering</div><div class="edu-period">Sep 2021 – May 2022</div></div><!--SSR:edu-grid:END--></div>
+    <div class="coursework reveal" id="coursework"><!--SSR:coursework:START--><div class="courses-label">Applicable Coursework</div><div class="courses-cap">Highlighted courses are most relevant to my current work.</div><div class="courses-pills"><span class="course-pill highlighted">Augmenting Human Dexterity</span><span class="course-pill highlighted">Control of UAVs</span><span class="course-pill highlighted">Manufacturing and Tolerancing</span><span class="course-pill highlighted">Mechatronics Design</span><span class="course-pill highlighted">Semiconductor Manufacturing</span></div><div class="courses-rest" id="courses-rest"><span class="course-pill">3D Modeling for Design</span><span class="course-pill">Astrobiology</span><span class="course-pill">Astrophysics</span><span class="course-pill">Control Systems Engineering</span><span class="course-pill">Electronics for the IoT</span><span class="course-pill">Engineering Mechanics</span><span class="course-pill">Engineering, Environment, and Society</span><span class="course-pill">Engineering Leadership</span><span class="course-pill">Experimentation and Measurements</span><span class="course-pill">Fluid Mechanics</span><span class="course-pill">Heat Transfer</span><span class="course-pill">Living Materials and their Biomaterial Replacements</span><span class="course-pill">Marine Energy</span><span class="course-pill">Mechanical Behavior of Engineering Materials</span><span class="course-pill">Ocean-Environment Mechanics</span><span class="course-pill">Solar Thermal Engineering</span><span class="course-pill">Sustainable Energy Design</span><span class="course-pill">Thermodynamics</span></div><button class="courses-toggle" id="courses-toggle" aria-expanded="false"><span>Show all coursework (23)</span><span class="ct-ic">+</span></button><!--SSR:coursework:END--></div>
   </div>
 </section>
 
 <section class="block" id="skills">
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-eyebrow">Toolkit</div><h2 class="sec-title">Skills</h2><div class="sec-rule"></div></div>
-    <div class="skills-grid" id="skills-grid"></div>
+    <div class="skills-grid" id="skills-grid"><!--SSR:skills:START--><div><div class="skill-cat">Software</div><div class="skill-pills"><span class="skill-pill">SolidWorks</span><span class="skill-pill">Python</span><span class="skill-pill">MATLAB</span><span class="skill-pill">C++</span><span class="skill-pill">Arduino</span><span class="skill-pill">LabVIEW</span><span class="skill-pill">GitHub</span><span class="skill-pill">JMP</span><span class="skill-pill">Simulink</span><span class="skill-pill">AutoCAD</span></div></div><div><div class="skill-cat">Engineering</div><div class="skill-pills"><span class="skill-pill">Mechanical Design</span><span class="skill-pill">Machine Vision</span><span class="skill-pill">Laser Systems</span><span class="skill-pill">Mechatronics</span><span class="skill-pill">CAD / GD&amp;T</span><span class="skill-pill">Electromechanical Design</span><span class="skill-pill">3D Printing</span><span class="skill-pill">Rapid Prototyping</span><span class="skill-pill">Tolerance Analysis</span><span class="skill-pill">Control Theory (PIDs)</span><span class="skill-pill">DAQ &amp; Analysis</span><span class="skill-pill">Iterative Design</span></div></div><!--SSR:skills:END--></div>
   </div>
 </section>
 
 <section class="block" id="publications" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-eyebrow">Research</div><h2 class="sec-title">Publications</h2><div class="sec-rule"></div></div>
-    <div id="pub-list"></div>
+    <div id="pub-list"><!--SSR:publications:START--><div class="pub reveal"><div class="pub-title">C60-based ionic salt electron shuttle for high-performance inverted perovskite solar modules</div><div class="pub-venue">Science, Vol. 388, No. 6750, pp. 964–968 &middot; 2025</div><a class="pub-link" href="https://doi.org/10.1126/science.adv4701" target="_blank" rel="noopener noreferrer">View publication &rarr;</a></div><!--SSR:publications:END--></div>
   </div>
 </section>
 
@@ -209,10 +251,7 @@
   <div class="wrap">
     <h2 class="contact-head reveal">Let's build something.</h2>
     <p class="contact-sub reveal">Open to mechanical, mechatronics, and process engineering roles. Reach out by email or LinkedIn.</p>
-    <div class="contact-links reveal">
-      <a id="contact-email" class="btn-primary"></a>
-      <a id="contact-linkedin" class="btn-outline" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-    </div>
+    <div class="contact-links reveal" id="contact-links"><!--SSR:contact:START--><a class="btn-primary" href="mailto:ToddRussell@proton.me">ToddRussell@proton.me</a><a class="btn-outline" href="assets/Todd_Russell_Resume.pdf" download>Download Resume (PDF)</a><a class="btn-outline" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/todd--russell/">LinkedIn Profile</a><!--SSR:contact:END--></div>
   </div>
 </section>
 
@@ -223,86 +262,55 @@
   </div>
 </footer>
 
+<script src="render.js"></script>
+<script id="ssr-data">/*SSR:data:START*/window.__RESUME__={"name":"Todd Russell","title":"Mechanical Engineer","tagline":"Multidisciplinary mechanical, mechatronics, and process engineer solving complex problems across automation, machine vision, and precision manufacturing, from R&D through production.","location":"Boston, MA","email":"ToddRussell@proton.me","linkedin":"https://www.linkedin.com/in/todd--russell/","resumePdf":"assets/Todd_Russell_Resume.pdf","descriptors":["Eagle Scout","Runner","Scuba Diver"],"stats":[{"value":"24%","label":"World-Record Module Efficiency"},{"value":"500%","label":"Laser Scribing Throughput Gain"},{"value":"35×","label":"Module Degradation Lifespan Improved"}],"experience":[{"company":"CubicPV Inc.","role":"Engineer III","period":"Oct 2023 – Present","location":"Bedford, MA","highlights":["Started as an intern and was promoted to Engineer II, then Engineer III, within one year.","Drove a 35% relative improvement in initial module efficiency and a 35× improvement in module degradation lifespan as lead of module development, owning all loss mechanisms related to modulization of the solar cell.","Achieved a world-record 24.0% efficiency perovskite module through joint development with NLR (formerly NREL).","Increased laser scribing throughput by 500% and yield by 5% and improved 6σ positional repeatability from 60μm to 20μm through automation and machine vision integration.","Spearheaded a company-wide defect tracking initiative, identifying two defect types present on 50% of modules driving 20× the degradation impact of all other categories combined."]},{"company":"CranioView","role":"R&D Mechanical Engineering Intern","period":"May 2023 – Sep 2023","location":"Los Angeles, CA","highlights":["Developed a user-friendly prototype to collect patient data and evaluate a non-invasive method of measuring intracranial pressure via ultrasound in patients with acute neurologic injury.","Conducted end-user interviews comparing existing solutions to inform design decisions."]},{"company":"No Pollution Industrial Systems Ltd.","role":"Mechanical Engineering Design Intern","period":"May 2022 – Jul 2022","location":"Edinburgh, UK","highlights":["Designed and modeled bespoke soundproofing, heat recovery, and controlled climate enclosure systems in SolidWorks for corrugated cardboard production lines.","Built master assemblies of 1,000+ individual components nested within subassemblies and improved the company's pack-and-go subassembly workflow."]},{"company":"National Security Innovation Network, U.S. Air Force","role":"Research Fellow","period":"Jun 2021 – Aug 2021","location":"Phoenix, AZ","highlights":["Lead author of a cost-benefit analysis on stationing aerospace ground equipment at Gila Bend Auxiliary Airfield to prepare diverted F-35 aircraft for return to Luke Air Force Base.","Recommended strategy yielded a net annual saving of $20,700 (73%) and was implemented at Luke AFB with planned nationwide rollout."]},{"company":"Greenaction for Health and Environmental Justice","role":"Research Intern","period":"Jan 2021 – May 2021","location":"San Francisco Bay Area, CA","highlights":["Co-authored a report detailing how climate change processes including sea-level rise and groundwater rise will reactivate historically contaminated sites across the San Francisco Bay Area.","Primary researcher and author of the Bayview Hunters Point case study, covering decades of radiological and industrial contamination from the Hunters Point Naval Shipyard, the Tetra Tech data-falsification scandal, and ongoing environmental injustice.","Report adopted by Greenaction to advocate for government and press action on contamination cleanup before climate change worsens its effects on vulnerable communities."]},{"company":"Endeavour Rocketry","role":"Recovery Engineer","period":"Oct 2021 – May 2022","location":"Edinburgh, UK","highlights":["Developed a black-powderless recovery system for the team's 9 km rocket, designing a motor-driven lead-screw mechanism to puncture a CO2 canister for parachute deployment.","Modeled descent characteristics under varying parachute parameters using MATLAB to size the drogue and main chutes."]},{"company":"Mechanical Engineering Competition Team at Berkeley","role":"Mechanical Engineer","period":"Sep 2020 – Jul 2021","location":"Berkeley, CA","highlights":["Designed, proposed, and manufactured an EVA tool attachment mechanism for astronaut utility belts for NASA's Micro-g NExT Challenge.","Editor-in-Chief of the technical report; selected for Phase 2 and tested at NASA's Neutral Buoyancy Laboratory."]}],"education":[{"school":"Northeastern University","degree":"M.S. Mechanical Engineering · Certificate of Engineering Leadership","period":"Sep 2023 – May 2025","details":"Gordon Fellow, Gordon Institute of Engineering Leadership"},{"school":"University of California, Berkeley","degree":"B.S. Mechanical Engineering","period":"Aug 2019 – May 2023","details":"GPA 3.89 / 4.0 · Cum Laude (Top 10%) · Dean's List, College of Engineering"},{"school":"University of Edinburgh","degree":"Study Abroad — Mechanical Engineering","period":"Sep 2021 – May 2022","details":""}],"highlightedCoursework":["Augmenting Human Dexterity","Control of UAVs","Manufacturing and Tolerancing","Mechatronics Design","Semiconductor Manufacturing"],"coursework":["3D Modeling for Design","Astrobiology","Astrophysics","Augmenting Human Dexterity","Control of UAVs","Control Systems Engineering","Electronics for the IoT","Engineering Mechanics","Engineering, Environment, and Society","Engineering Leadership","Experimentation and Measurements","Fluid Mechanics","Heat Transfer","Living Materials and their Biomaterial Replacements","Manufacturing and Tolerancing","Marine Energy","Mechanical Behavior of Engineering Materials","Mechatronics Design","Ocean-Environment Mechanics","Semiconductor Manufacturing","Solar Thermal Engineering","Sustainable Energy Design","Thermodynamics"],"skills":{"Software":["SolidWorks","Python","MATLAB","C++","Arduino","LabVIEW","GitHub","JMP","Simulink","AutoCAD"],"Engineering":["Mechanical Design","Machine Vision","Laser Systems","Mechatronics","CAD / GD&T","Electromechanical Design","3D Printing","Rapid Prototyping","Tolerance Analysis","Control Theory (PIDs)","DAQ & Analysis","Iterative Design"]},"publications":[{"title":"C60-based ionic salt electron shuttle for high-performance inverted perovskite solar modules","venue":"Science, Vol. 388, No. 6750, pp. 964–968","year":"2025","url":"https://doi.org/10.1126/science.adv4701"}]};window.__PROJECTS__=[{"id":"module-efficiency","category":"Work","featured":true,"company":"CubicPV Inc.","title":"World-Record Perovskite Module","year":"2025","image":"assets/module-24.jpg","metric":{"value":"24%","label":"world-record module efficiency"},"summary":"Led all modulization loss mechanisms to a world-record 24% efficiency module, jointly developed with NLR (formerly NREL).","tags":["Module Development","NLR","Process Engineering","Solar"],"par":{"problem":"Modulizing perovskite solar cells introduced loss mechanisms that capped both efficiency and degradation lifespan.","action":"As lead of module development, owned every loss mechanism related to cell modulization and drove joint development with NLR (formerly NREL).","result":"Achieved a world-record 24.0% efficiency module, a 35% relative gain in initial module efficiency, and a 35× improvement in degradation lifespan. Work published in Science (2025)."}},{"id":"laser-scribing","category":"Work","featured":false,"company":"CubicPV Inc.","title":"Laser Scribing Automation & Machine Vision","year":"2024","image":"assets/laser-scribing.jpg","metric":{"value":"500%","label":"throughput increase"},"summary":"Automated laser scribing with machine-vision alignment; 500% throughput and repeatability from 60μm to 20μm.","tags":["Machine Vision","Python","Laser Systems","Automation"],"par":{"problem":"Manual laser scribing was slow, engineer-dependent, and positionally inconsistent across substrates.","action":"Automated the process with a Sherlock machine-vision system to detect glass-edge position and skew, and built a parameterized, recipe-based UI that adapts to evolving production needs, transitioning operation from engineer to technician level.","result":"Increased throughput 500% and yield 5%, cut takt time 33%, and improved 6σ positional repeatability from 60μm to 20μm."}},{"id":"defect-tracking","category":"Work","featured":false,"company":"CubicPV Inc.","title":"Company-Wide Defect Tracking System","year":"2025","image":null,"metric":{"value":"20×","label":"degradation impact isolated"},"summary":"Identified two defect types on 50% of modules driving 20× the degradation impact of all others combined.","tags":["Process Engineering","Data Analysis","Systems Design"],"par":{"problem":"Degradation drivers were not systematically tracked, so process improvements were not data-driven.","action":"Spearheaded a defect tracking initiative, built a Pareto linking frequency and severity to degradation, and authored the functional specification for the software team.","result":"Identified two defect types present on 50% of modules causing 20× the degradation impact of all other categories combined, enabling company-wide rollout and large-dataset-driven process improvements."}},{"id":"nir-jig","category":"Work","featured":false,"company":"CubicPV Inc.","title":"NIR Characterization Jig","year":"2026","image":"assets/nir-jig-assembled.jpg","metric":null,"summary":"Scoped, designed, and delivered a custom near-infrared characterization fixture, requirements to assembled tool.","tags":["SolidWorks","3D Printing","Mechanical Design"],"par":{"problem":"Characterization work needed a repeatable NIR fixture with no off-the-shelf option available.","action":"Gathered requirements with stakeholders, pitched two concepts, modeled the selected design in SolidWorks, then 3D printed and assembled it.","result":"Jig assembled and installed in the lab, enabling repeatable NIR characterization of substrates."}},{"id":"ss2-frame","category":"Work","featured":false,"company":"CubicPV Inc.","title":"SS2 RobotUnit Frame","year":"2026","image":"assets/ss2-frame-installed.jpg","metric":null,"summary":"Designed, fabricated, and installed a structural frame for the SS2 outdoor test system.","tags":["SolidWorks","Fabrication","Structural Design"],"par":{"problem":"The SS2 test station needed a robot-unit frame consistent with the existing SS1 design and lab constraints.","action":"Measured the SS1 frame, modeled SS2 in SolidWorks, cut stock, and assembled the structure.","result":"Frame fabricated and installed, enabling outdoor degradation testing of production modules."}},{"id":"dmc-tray-scanner","category":"Work","featured":false,"company":"CubicPV Inc.","title":"DMC Tray Scanner","year":"2026","image":"assets/DMC-tray-scanner-build.png","cadImage":"assets/DMC-tray-scanner-CAD.png","metric":{"value":"~90%","label":"scan time reduction"},"summary":"Designed and built a linear DMC scanning system that captures each substrate's tray position in a single pass, cutting scan time ~90%.","tags":["Machine Vision","Mechanical Design","Process Engineering"],"par":{"problem":"Single-substrate scanning was slow and did not link tray position to downstream performance data.","action":"Designed and built a linear Data Matrix Code scanning system that captures each substrate's tray position in a single scanner pass across 3 manufacturing processes.","result":"Reduced substrate scan time by ~90% and enabled tray-position tracking that links substrate location during a process to its performance data."}},{"id":"large-module-photobooth","category":"Work","featured":false,"company":"CubicPV Inc.","title":"Large-Module Photobooth","year":"2026","image":"assets/photobooth-image.jpg","metric":null,"summary":"Converted a photoluminescence box into a multi-mode photobooth for visual characterization of 400mm substrates.","tags":["3D Printing","Mechanical Design","Characterization"],"par":{"problem":"No production-scale visual characterization tool existed for 400mm substrates.","action":"Converted a large-area photoluminescence box into a multi-mode photobooth, engineering a 3D-printed lighting mount to block light leakage and diffuse output, and installed dual-illumination with external mode-switching.","result":"Delivered an operator-ready characterization tool with validated backlight and toplight imaging modes at production scale."}},{"id":"sdc-dmc-scanning","category":"Work","featured":false,"company":"CubicPV Inc.","title":"SDC DMC Scanning System","year":"2026","image":null,"metric":null,"summary":"Designed and installed two DMC scanning stations in coaters for automated traceability of coating events.","tags":["Machine Vision","Process Engineering","Automation"],"par":{"problem":"Coating events were not automatically linked to substrate identity, limiting traceability.","action":"Designed, installed, and tuned two DMC scanning stations in coaters, iterating hardware based on production team feedback for glass clearance, particle reduction, and scan-success indication.","result":"Enabled automated traceability of coating events with an operator-ready system shaped by production feedback."}},{"id":"f35-analysis","category":"Work","featured":false,"company":"NSIN, U.S. Air Force","title":"F-35 Ground Equipment Cost-Benefit Analysis","year":"2021","image":null,"pdf":"assets/f35-report.pdf","metric":{"value":"73%","label":"annual cost reduction"},"summary":"Lead author of an analysis adopted by Luke AFB, saving $20,700 (73%) annually.","tags":["Systems Analysis","Aerospace","Technical Writing"],"par":{"problem":"Diverted F-35 aircraft at Gila Bend Auxiliary Airfield required aerospace ground equipment transported from Luke AFB at significant recurring cost.","action":"Led a cost-benefit analysis of stationing options and authored the final report for the sponsor and program operator.","result":"Recommended strategy saved $20,700 (73%) annually with minimal workload increase, was implemented at Luke AFB, and was slated for nationwide rollout."}},{"id":"icp-prototype","category":"Work","featured":false,"company":"CranioView","title":"Non-Invasive Intracranial Pressure Prototype","year":"2023","image":"assets/cranioview.jpg","metric":null,"summary":"Built a prototype testbed evaluating non-invasive intracranial pressure measurement via ultrasound.","tags":["Medical Devices","Mechatronics","Prototyping","Ultrasound"],"par":{"problem":"Measuring intracranial pressure in patients with acute neurologic injury traditionally requires invasive methods.","action":"Developed a user-friendly SolidWorks prototype to collect patient data and ran end-user interviews against existing solutions.","result":"Enabled clinical evaluation of a non-invasive ultrasound-based ICP measurement method."}},{"id":"no-pollution","category":"Work","featured":false,"company":"No Pollution Industrial Systems","title":"Production Line Enclosure Systems","year":"2022","image":"assets/no-pollution-dry-end.png","metric":{"value":"1,000+","label":"components per assembly"},"summary":"Designed bespoke soundproofing, heat-recovery, and climate enclosure systems for cardboard production lines.","tags":["SolidWorks","Mechanical Design","Assemblies"],"par":{"problem":"Corrugated cardboard production lines needed bespoke enclosure systems for sound, heat recovery, and climate control.","action":"Designed and modeled the dry-end enclosure in SolidWorks and improved the company's pack-and-go subassembly workflow.","result":"Produced production-ready master assemblies of 1,000+ components and streamlined the company's subassembly packaging workflow."}},{"id":"adaptive-bike","category":"Class","featured":true,"company":"UC Berkeley · ME179","title":"Adaptive Bike Shift & Brake Mechanism","year":"2023","image":"assets/shifter-CAD.png","video":"assets/Adaptive Road Bike Shifter and Braking Mechanism Demonstration Video.mp4","youtubeUrl":"https://www.youtube.com/watch?v=WX-xVGZBm2s","metric":null,"summary":"Adaptive shifters that move actuation from wrist to shoulder for a quadriplegic cyclist.","tags":["Assistive Tech","Mechanical Design","Prototyping"],"par":{"problem":"Our need-knower with incomplete quadriplegia could not use his handcycle, as braking and shifting required a wrist motion he was weak in.","action":"Designed, manufactured, and tested a mechanism that shifts actuation from the hand to along the forearm, enabling a shoulder motion instead.","result":"Won 'Most Likely to be Commercialized' at the Jacobs Showcase."}},{"id":"cling-wrap","category":"Class","featured":false,"company":"UC Berkeley · Mechatronics","title":"Automated Cling Wrap Dispenser","year":"2023","image":"assets/cling-wrap.png","video":"assets/Automated Cling Wrap Dispenser Demonstration Video.mp4","youtubeUrl":"https://www.youtube.com/watch?v=tQQUfPcJ21Y","metric":null,"summary":"Built an automated dispenser; managed all electronics and wrote PI controllers in C++ on an ESP32.","tags":["Mechatronics","C++","Controls","ESP32"],"par":{"problem":"Manual cling-wrap dispensing is slow and awkward in food prep and storage.","action":"Built an automated dispenser, managing motors, drivers, and analog/digital sensors and writing PI controllers for the arm and slicer in C++.","result":"Produced a fully functional automated dispenser driven by an ESP32 microcontroller with closed-loop motor control."}},{"id":"greenaction-climate","category":"Class","featured":false,"company":"UC Berkeley · ENGIN 157AC","title":"Climate Change & Contamination Report","year":"2021","image":null,"pdf":"assets/GreenBOTZ Final Report.pdf","metric":null,"summary":"Co-authored a report for Greenaction for Health and Environmental Justice detailing how climate change will exacerbate historical contamination in the San Francisco Bay Area.","tags":["Environmental Justice","Technical Writing","Research"],"par":{"problem":"Climate change processes such as sea-level rise and groundwater rise threaten to reactivate historically contaminated sites across the San Francisco Bay Area, but the intersection of these risks was not well documented for advocacy.","action":"As a research intern with Greenaction, co-authored a four-case-study report; primary author of the Bayview Hunters Point case study covering the site's radiological and industrial contamination history, health impacts, cleanup fraud, and ongoing environmental injustice.","result":"Report adopted by Greenaction to advocate for government and press attention to contamination cleanup before climate change worsens its effects on vulnerable communities."}},{"id":"wind-turbine","category":"Class","featured":false,"company":"University of Edinburgh","title":"Model Wind Turbine","year":"2022","image":"assets/model-wind-turbine.png","metric":{"value":"10 W","label":"regulated output at 5.5 V"},"summary":"Designed a model turbine and the AC-DC circuitry to deliver constant regulated power.","tags":["Power Electronics","Sustainable Energy","Design"],"par":{"problem":"The brief required a constant 10 W at 5.5 V across wind speeds of 10–20 m/s.","action":"Contributed to the overall design and built the circuitry converting generator AC to regulated DC.","result":"Achieved constant 10 W regulated output at 5.5 V across the full 10–20 m/s wind speed range."}},{"id":"rabet","category":"Club","featured":true,"company":"MEC Team at Berkeley · NASA","title":"NASA Micro-g NExT RABeT System","year":"2021","image":"assets/RABeT.png","pdf":"assets/Micro-g NExT Proposal.pdf","metric":{"value":"NBL","label":"tested at NASA's Neutral Buoyancy Lab"},"summary":"Designed a one-handed EVA tool attachment for astronaut utility belts, tested by NASA at the NBL.","tags":["NASA","FEA","Mechanical Design","Space Systems"],"par":{"problem":"NASA's Micro-g NExT challenge sought a quick-release system letting astronauts attach EVA tools to their utility belt.","action":"Designed, proposed, and manufactured the Rapid Attachment Belt and Tool system for blind, one-handed operation; served as Editor-in-Chief of the technical report using FEA, FMEA, and trade studies.","result":"Selected for Phase 2 and tested at NASA's Neutral Buoyancy Laboratory, noted for intuitive design and resilience to lunar regolith."}},{"id":"endeavour-recovery","category":"Club","featured":false,"company":"Endeavour Rocketry","title":"Rocket Recovery System","year":"2022","image":"assets/endeavour.png","metric":{"value":"9 km","label":"target apogee"},"summary":"Designed a black-powderless CO2 recovery system and modeled descent dynamics in MATLAB.","tags":["Aerospace","MATLAB","Mechanical Design"],"par":{"problem":"The team's 9 km rocket needed a recovery system to replace the prior black-powder approach.","action":"Designed a motor-driven lead-screw mechanism puncturing a CO2 canister to deploy the parachutes, and modeled descent characteristics in MATLAB to size the drogue and main chutes.","result":"Recovery system validated with correctly sized drogue and main chutes for the rocket's descent profile."}},{"id":"emissions-code","category":"Personal","featured":true,"company":"Berkeley Study Abroad","title":"Flight Emissions Automation","year":"2021","image":null,"metric":{"value":"\u003c10 s","label":"down from 15+ minutes"},"summary":"Automated a hundreds-of-hours emissions task; cut runtime from 15+ minutes to under 10 seconds.","tags":["Python","Algorithms","Automation"],"par":{"problem":"Calculating emissions for thousands of study-abroad student flights would have taken hundreds of hours by hand.","action":"Automated the calculation using airport latitude/longitude lookups, then implemented a binary search to replace a 15-minute-per-iteration linear scan.","result":"Cut runtime to under 10 seconds, completing in seconds what would have taken hundreds of hours."}},{"id":"water-rocket","category":"Personal","featured":false,"company":"Personal Build","title":"High-Pressure Water Rocket Launcher","year":"2020","image":"assets/water-bottle-rocket-launcher.png","video":"assets/Water Bottle Rocket Initial Test 80psi.mp4","metric":{"value":"~300 ft","label":"estimated apogee"},"summary":"Built an 80 psi water-rocket launcher and flew an onboard camera to estimate a 300 ft apogee.","tags":["Fabrication","Pneumatics","Build"],"par":{"problem":"Wanted a high-powered, reusable water-rocket platform.","action":"Designed and built a launcher pressurized to 80 psi and flew an onboard camera for flight data.","result":"Estimated a ~300 ft apogee using the onboard footage and a field reference."}},{"id":"nerf-cannon","category":"Personal","featured":false,"company":"Physics Project","title":"Burst-Disk Nerf Air Cannon","year":"2019","image":"assets/nerf-air-cannon.png","video":"assets/Air Cannon Watermelon Video.mp4","metric":null,"summary":"Designed a burst-disk pneumatic cannon reaching velocities that required reinforcing the projectiles.","tags":["Pneumatics","Fabrication","Build"],"par":{"problem":"A physics project called for a high-velocity projectile launcher.","action":"Built a pressure chamber and barrel separated by a plastic burst disk, pressurizing to a few hundred psi before release.","result":"Air velocity was high enough that Nerf darts had to be reinforced with tape; metal hex drivers embedded inches into a wooden backstop."}},{"id":"coffee-table","category":"Personal","featured":false,"company":"Personal Build","title":"Designed & Built Coffee Table","year":"2020","image":"assets/Coffee-table.jpg","metric":null,"summary":"Modeled a coffee table in SolidWorks from spare lumber, then built, stained, and finished it.","tags":["SolidWorks","Woodworking","Design"],"par":{"problem":"Wanted a coffee table for my apartment using leftover wood.","action":"Modeled the design in SolidWorks, then built, stained, and applied a protective finish.","result":"Used the table throughout the rest of my undergraduate program."}}];/*SSR:data:END*/</script>
 <script>
-  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-
+  var R = window.PortfolioRender;
+  function $(id){ return document.getElementById(id); }
   async function loadData(){
     if (window.__RESUME__) return { resume: window.__RESUME__ };
-    const r = await fetch('resume.json');
+    var r = await fetch('resume.json');
     return { resume: await r.json() };
   }
-
   function renderHero(r){
-    document.getElementById('hero-tagline').textContent = r.tagline;
-    document.getElementById('hero-desc').innerHTML = (r.descriptors||[]).map(d=>`<span>${esc(d)}</span>`).join('');
+    var t = $('hero-tagline'); if (t) t.textContent = r.tagline;
+    var d = $('hero-desc'); if (d) d.innerHTML = R.buildHeroDesc(r);
+    if (r.resumePdf) ['hero-resume','nav-resume'].forEach(function(id){ var a=$(id); if(a) a.href=r.resumePdf; });
   }
-  function renderStats(stats){
-    document.getElementById('stats-bar').innerHTML = stats.map(s=>`
-      <div class="stat"><div class="stat-value">${esc(s.value)}</div><div class="stat-label">${esc(s.label)}</div></div>`).join('');
+  function renderStats(s){ var el=$('stats-bar'); if(el) el.innerHTML = R.buildStats(s); }
+  function renderContact(r){ var el=$('contact-links'); if(el) el.innerHTML = R.buildContact(r); }
+  function bindCoursework(){
+    var btn=$('courses-toggle'); if(!btn||btn.dataset.bound) return; btn.dataset.bound='1';
+    btn.addEventListener('click', function(){
+      var rest=$('courses-rest'); var open=rest.classList.toggle('open'); btn.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open?'true':'false');
+      var total = rest.parentElement.querySelectorAll('.course-pill').length;
+      btn.querySelector('span:first-child').textContent = open ? 'Show less' : 'Show all coursework (' + total + ')';
+    });
   }
-  function renderExperience(exps){
-    document.getElementById('exp-list').innerHTML = exps.map(e=>`
-      <div class="exp-item reveal">
-        <div><div class="exp-co">${esc(e.company)}</div><div class="exp-period">${esc(e.period)}</div><div class="exp-loc">${esc(e.location)}</div></div>
-        <div><div class="exp-role">${esc(e.role)}</div><ul class="exp-bullets">${e.highlights.map(h=>`<li>${esc(h)}</li>`).join('')}</ul></div>
-      </div>`).join('');
-  }
-  function renderEducation(edu, coursework, highlighted){
-    document.getElementById('edu-grid').innerHTML = edu.map(e=>`
-      <div class="edu-card reveal"><div class="edu-school">${esc(e.school)}</div><div class="edu-degree">${esc(e.degree)}</div>
-        <div class="edu-period">${esc(e.period)}</div>${e.details?`<div class="edu-details">${esc(e.details)}</div>`:''}</div>`).join('');
-    const ce = document.getElementById('coursework');
-    if (coursework && coursework.length){
-      const hl = new Set(highlighted||[]);
-      const primary = coursework.filter(c=>hl.has(c));
-      const rest = coursework.filter(c=>!hl.has(c));
-      const total = coursework.length;
-      ce.innerHTML = `<div class="courses-label">Applicable Coursework</div>
-        <div class="courses-cap">Selected coursework across all three programs.</div>
-        <div class="courses-pills">${primary.map(c=>`<span class="course-pill highlighted">${esc(c)}</span>`).join('')}</div>
-        <div class="courses-rest" id="courses-rest">${rest.map(c=>`<span class="course-pill">${esc(c)}</span>`).join('')}</div>
-        <button class="courses-toggle" id="courses-toggle"><span>Show all ${total} courses</span><span class="ct-ic">+</span></button>`;
-      document.getElementById('courses-toggle').addEventListener('click',function(){
-        this.classList.toggle('open');
-        document.getElementById('courses-rest').classList.toggle('open');
-        this.querySelector('span:first-child').textContent = this.classList.contains('open') ? 'Show fewer' : 'Show all ' + total + ' courses';
-      });
-    } else { ce.style.display='none'; }
-  }
-  function renderSkills(skills){
-    document.getElementById('skills-grid').innerHTML = Object.entries(skills).map(([c,items])=>`
-      <div class="reveal"><div class="skill-cat">${esc(c)}</div><div class="skill-pills">${items.map(s=>`<span class="skill-pill">${esc(s)}</span>`).join('')}</div></div>`).join('');
-  }
-  function renderPublications(pubs){
-    const sec = document.getElementById('publications');
-    if (!pubs || !pubs.length){ sec.style.display='none'; return; }
-    document.getElementById('pub-list').innerHTML = pubs.map(p=>`
-      <div class="pub reveal"><div class="pub-title">${esc(p.title)}</div><div class="pub-venue">${esc(p.venue)} (${esc(p.year)})</div>
-        ${p.url?`<a class="pub-link" href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">View publication &rarr;</a>`:''}</div>`).join('');
-  }
-  function renderContact(r){
-    const em = document.getElementById('contact-email');
-    em.href = 'mailto:'+r.email; em.textContent = r.email;
-    document.getElementById('contact-linkedin').href = r.linkedin;
-  }
-  let io;
+  var io;
   function initReveal(){
-    if (!io) io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:0.08});
-    document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+    if (!io) io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
   }
-
-  (async function init(){
-    try{
-      const {resume} = await loadData();
-      renderHero(resume); renderStats(resume.stats);
-      renderExperience(resume.experience);
-      renderEducation(resume.education, resume.coursework, resume.highlightedCoursework);
-      renderSkills(resume.skills);
-      renderPublications(resume.publications);
-      renderContact(resume);
-      initReveal();
-    }catch(err){ console.error('Resume page load error:', err); }
+  function bindHamburger(){
+    var t=$('nav-toggle'), links=$('nav-links'); if(!t||!links) return;
+    t.addEventListener('click', function(){ var open=links.classList.toggle('open'); t.setAttribute('aria-expanded', open?'true':'false'); });
+    links.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ links.classList.remove('open'); t.setAttribute('aria-expanded','false'); }); });
+  }
+  (async function(){
+    bindHamburger();
+    try {
+      var d = await loadData(); var r = d.resume;
+      renderHero(r); renderStats(r.stats);
+      $('exp-list').innerHTML = R.buildExperience(r);
+      var edu = R.buildEducation(r); $('edu-grid').innerHTML = edu.grid; $('coursework').innerHTML = edu.coursework;
+      $('skills-grid').innerHTML = R.buildSkills(r);
+      $('pub-list').innerHTML = R.buildPublications(r);
+      renderContact(r); bindCoursework(); initReveal();
+    } catch (err) { console.error('Resume load error:', err); }
   })();
+
 </script>
 </body>
 </html>

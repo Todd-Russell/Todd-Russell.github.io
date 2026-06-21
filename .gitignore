@@ -1,0 +1,11 @@
+# Build scaffolding (not part of the deployed site)
+render_inline_index.js
+render_inline_resume.js
+patch.py
+
+# Local/working cruft
+_synctest.txt
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
