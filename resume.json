@@ -6,11 +6,24 @@
   "email": "ToddRussell@proton.me",
   "linkedin": "https://www.linkedin.com/in/todd--russell/",
   "resumePdf": "assets/Todd_Russell_Resume.pdf",
-  "descriptors": ["Eagle Scout", "Runner", "Scuba Diver"],
+  "descriptors": [
+    "Eagle Scout",
+    "Runner",
+    "Scuba Diver"
+  ],
   "stats": [
-    { "value": "24%",  "label": "World-Record Module Efficiency" },
-    { "value": "500%", "label": "Laser Scribing Throughput Gain" },
-    { "value": "35×",  "label": "Module Degradation Lifespan Improved" }
+    {
+      "value": "24%",
+      "label": "World-Record Module Efficiency"
+    },
+    {
+      "value": "500%",
+      "label": "Laser Scribing Throughput Gain"
+    },
+    {
+      "value": "35×",
+      "label": "Module Degradation Lifespan Improved"
+    }
   ],
   "experience": [
     {
@@ -43,7 +56,7 @@
       "location": "Edinburgh, UK",
       "highlights": [
         "Designed and modeled bespoke soundproofing, heat recovery, and controlled climate enclosure systems in SolidWorks for corrugated cardboard production lines.",
-        "Built master assemblies of 1,000+ individual components nested within subassemblies and improved the company's pack-and-go subassembly workflow."
+        "Built master assemblies of 1,000+ individual components nested within subassemblies and authored the engineering drawings for producing the dry-end enclosure parts."
       ]
     },
     {
@@ -109,21 +122,64 @@
     }
   ],
   "highlightedCoursework": [
-    "Augmenting Human Dexterity", "Control of UAVs", "Manufacturing and Tolerancing",
-    "Mechatronics Design", "Semiconductor Manufacturing"
+    "Augmenting Human Dexterity",
+    "Control of UAVs",
+    "Manufacturing and Tolerancing",
+    "Mechatronics Design",
+    "Semiconductor Manufacturing"
   ],
   "coursework": [
-    "3D Modeling for Design", "Astrobiology", "Astrophysics", "Augmenting Human Dexterity",
-    "Control of UAVs", "Control Systems Engineering", "Electronics for the IoT", "Engineering Mechanics",
-    "Engineering, Environment, and Society", "Engineering Leadership", "Experimentation and Measurements",
-    "Fluid Mechanics", "Heat Transfer", "Living Materials and their Biomaterial Replacements",
-    "Manufacturing and Tolerancing", "Marine Energy", "Mechanical Behavior of Engineering Materials",
-    "Mechatronics Design", "Ocean-Environment Mechanics", "Semiconductor Manufacturing",
-    "Solar Thermal Engineering", "Sustainable Energy Design", "Thermodynamics"
+    "3D Modeling for Design",
+    "Astrobiology",
+    "Astrophysics",
+    "Augmenting Human Dexterity",
+    "Control of UAVs",
+    "Control Systems Engineering",
+    "Electronics for the IoT",
+    "Engineering Mechanics",
+    "Engineering, Environment, and Society",
+    "Engineering Leadership",
+    "Experimentation and Measurements",
+    "Fluid Mechanics",
+    "Heat Transfer",
+    "Living Materials and their Biomaterial Replacements",
+    "Manufacturing and Tolerancing",
+    "Marine Energy",
+    "Mechanical Behavior of Engineering Materials",
+    "Mechatronics Design",
+    "Ocean-Environment Mechanics",
+    "Semiconductor Manufacturing",
+    "Solar Thermal Engineering",
+    "Sustainable Energy Design",
+    "Thermodynamics"
   ],
   "skills": {
-    "Software": ["SolidWorks", "Python", "MATLAB", "C++", "Arduino", "LabVIEW", "GitHub", "JMP", "Simulink", "AutoCAD"],
-    "Engineering": ["Mechanical Design", "Machine Vision", "Laser Systems", "Mechatronics", "CAD / GD&T", "Electromechanical Design", "3D Printing", "Rapid Prototyping", "Tolerance Analysis", "Control Theory (PIDs)", "DAQ & Analysis", "Iterative Design"]
+    "Software": [
+      "SolidWorks",
+      "Python",
+      "MATLAB",
+      "C++",
+      "Arduino",
+      "LabVIEW",
+      "GitHub",
+      "JMP",
+      "Simulink",
+      "AutoCAD"
+    ],
+    "Engineering": [
+      "Mechanical Design",
+      "Machine Vision",
+      "Laser Systems",
+      "Mechatronics",
+      "CAD / GD&T",
+      "Electromechanical Design",
+      "3D Printing",
+      "Rapid Prototyping",
+      "Tolerance Analysis",
+      "Control Theory (PIDs)",
+      "DAQ & Analysis",
+      "Iterative Design"
+    ]
   },
   "publications": [
     {
