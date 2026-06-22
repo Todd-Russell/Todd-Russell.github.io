@@ -1,3 +1,0 @@
-file 'bike1.mp4'
-file 'bike2.mp4'
-file 'bike3.mp4'
