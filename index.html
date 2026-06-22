@@ -264,16 +264,16 @@
   <div class="hero-grid"></div>
   <div class="wrap hero-inner">
     <div class="hero-text">
-      <div class="hero-eyebrow">Mechanical Design · Mechatronics · Process Engineering</div>
-      <h1 class="hero-name">Todd<br>Russell<b>.</b></h1>
-      <div class="hero-rule"></div>
-      <p class="hero-tagline" id="hero-tagline"><!--SSR:hero-tagline:START-->Multidisciplinary mechanical, mechatronics, and process engineer solving complex problems across automation, machine vision, and precision manufacturing, from R&amp;D through production.<!--SSR:hero-tagline:END--></p>
-      <div class="hero-desc" id="hero-desc"><!--SSR:hero-desc:START--><span>Eagle Scout</span><span>Runner</span><span>Scuba Diver</span><!--SSR:hero-desc:END--></div>
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">View Work</a>
-        <a href="resume.html#experience" class="btn-outline">Experience and Background</a>
-        <a href="assets/Todd_Russell_Resume.pdf" class="btn-outline" id="hero-resume" download>Download Resume (PDF)</a>
-      </div>
+    <div class="hero-eyebrow">Mechanical Design · Mechatronics · Process Engineering</div>
+    <h1 class="hero-name">Todd<br>Russell<b>.</b></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-tagline" id="hero-tagline"><!--SSR:hero-tagline:START-->Multidisciplinary mechanical, mechatronics, and process engineer solving complex problems across automation, machine vision, and precision manufacturing, from R&amp;D through production.<!--SSR:hero-tagline:END--></p>
+    <div class="hero-desc" id="hero-desc"><!--SSR:hero-desc:START--><span>Eagle Scout</span><span>Runner</span><span>Scuba Diver</span><!--SSR:hero-desc:END--></div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Work</a>
+      <a href="resume.html#experience" class="btn-outline">Experience and Background</a>
+      <a href="assets/Todd_Russell_Resume.pdf" class="btn-outline" id="hero-resume" download>Download Resume (PDF)</a>
+    </div>
     </div>
     <div class="hero-portrait">
       <span class="pbar"></span>
@@ -404,4 +404,27 @@
         else if (k==='Home'){ pct=0; apply(); e.preventDefault(); }
         else if (k==='End'){ pct=1; apply(); e.preventDefault(); }
       });
-      requ
+      requestAnimationFrame(apply);
+    });
+  }
+  var io;
+  function initReveal(){
+    if (!io) io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
+  }
+  function bindHamburger(){
+    var t=$('nav-toggle'), links=$('nav-links'); if(!t||!links) return;
+    t.addEventListener('click', function(){ var open=links.classList.toggle('open'); t.setAttribute('aria-expanded', open?'true':'false'); });
+    links.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ links.classList.remove('open'); t.setAttribute('aria-expanded','false'); }); });
+  }
+  (async function(){
+    bindHamburger();
+    try {
+      var d = await loadData();
+      renderHero(d.resume); renderStats(d.resume.stats); renderProjects(d.projects); renderContact(d.resume); initReveal();
+    } catch (err) { console.error('Portfolio load error:', err); }
+  })();
+
+</script>
+</body>
+</html>
