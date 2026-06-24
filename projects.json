@@ -145,18 +145,18 @@
     "category": "Work",
     "featured": false,
     "company": "CubicPV Inc.",
-    "title": "Large-Module Photobooth",
+    "title": "Large Solar Cell Photobooth",
     "year": "2026",
     "image": "assets/photobooth-image.jpg",
     "metric": null,
-    "summary": "Converted a photoluminescence box into a multi-mode photobooth for visual characterization of large-area modules.",
+    "summary": "Converted a photoluminescence box into a multi-mode photobooth for visual characterization of large-area solar cells.",
     "tags": [
       "3D Printing",
       "Mechanical Design",
       "Characterization"
     ],
     "par": {
-      "problem": "No production-scale visual characterization tool existed for large-area modules.",
+      "problem": "No production-scale visual characterization tool existed for large-area solar cells.",
       "action": "Converted a large-area photoluminescence box into a multi-mode photobooth, engineering a 3D-printed lighting mount to block light leakage and diffuse output, and installed dual-illumination with external mode-switching.",
       "result": "Delivered an operator-ready characterization tool with validated backlight and toplight imaging modes at production scale."
     }
