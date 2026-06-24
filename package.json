@@ -1,0 +1,17 @@
+{
+  "name": "todd-russell-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal engineering portfolio for Todd Russell - a pre-rendered static site hosted on GitHub Pages.",
+  "homepage": "https://todd-russell.github.io/",
+  "scripts": {
+    "build": "node build.js",
+    "validate": "node -e \"['resume.json','projects.json'].forEach(function(f){JSON.parse(require('fs').readFileSync(f,'utf8'));console.log(f+' valid')})\"",
+    "serve": "python3 -m http.server 8000",
+    "preview": "npm run build && python3 -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

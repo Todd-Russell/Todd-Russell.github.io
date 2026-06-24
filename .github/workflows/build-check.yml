@@ -1,0 +1,33 @@
+name: build-check
+
+# Drift guard: verifies the committed pre-rendered HTML matches the JSON source.
+# All site content lives in resume.json / projects.json, but index.html and
+# resume.html ship with that content baked in (for crawlers, link previews, ATS).
+# This job re-runs the build and fails if someone edited the JSON without running
+# `node build.js`, so stale HTML can never reach the deployed site.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Re-render site from JSON
+        run: node build.js
+
+      - name: Fail if pre-rendered HTML is out of date
+        run: |
+          if ! git diff --exit-code -- index.html resume.html; then
+            echo "::error::Pre-rendered HTML is stale. Run 'node build.js' locally and commit index.html and resume.html."
+            exit 1
+          fi
