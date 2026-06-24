@@ -31,12 +31,49 @@
       "role": "Engineer III",
       "period": "Oct 2023 – Present",
       "location": "Bedford, MA",
-      "highlights": [
-        "Started as an intern and was promoted to Engineer II, then Engineer III, within one year.",
-        "Drove a 35% relative improvement in initial module efficiency and a 35× improvement in module degradation lifespan as lead of module development, owning all loss mechanisms related to modulization of the solar cell.",
-        "Achieved a world-record 24.0% efficiency perovskite module through joint development with NLR (formerly NREL).",
-        "Increased laser scribing throughput by 500% and yield by 5% and improved 6σ positional repeatability from 60μm to 20μm through automation and machine vision integration.",
-        "Spearheaded a company-wide defect tracking initiative, identifying two defect types present on 50% of modules driving 20× the degradation impact of all other categories combined."
+      "intro": "Started as Engineer II after internship, then promoted to Engineer III within a year.",
+      "groups": [
+        {
+          "name": "Module Development & Efficiency",
+          "bullets": [
+            "Drove a 35% relative improvement in initial module efficiency and a 35× improvement in module degradation lifespan as lead of module development, owning all loss mechanisms related to modulization of the solar cell.",
+            "Achieved a world-record 24.0% efficiency perovskite module through joint development with NLR (formerly NREL).",
+            "Established baseline production of scalable module processes."
+          ]
+        },
+        {
+          "name": "Laser Scribing Automation",
+          "bullets": [
+            "Increased laser scribing throughput by 500% and yield by 5%, decreased takt time by 33%, and improved 6σ positional repeatability from 60 μm to 20 μm.",
+            "Automated the laser scribing process, transitioning operation from engineer-level to technician-level.",
+            "Streamlined the process and wrote a parameterized codebase enabling a recipe-based UI capable of adapting to evolving production needs.",
+            "Developed and built machine vision system to automatically adjust for position and skew of solar cell relative to nominal."
+          ]
+        },
+        {
+          "name": "Defect Tracking",
+          "bullets": [
+            "Identified two defect types present on 50% of modules causing a 20× greater impact on degradation performance than all other defect categories.",
+            "Developed a defect Pareto linking defect frequency and severity to degradation performance.",
+            "Spearheaded defect tracking initiative and authored the functional specification for the software team, enabling company-wide rollout and large-dataset-driven process improvements."
+          ]
+        },
+        {
+          "name": "DMC Tray Scanner",
+          "bullets": [
+            "Designed and built a linear Data Matrix Code (DMC) scanning system that captures each solar cell's tray position in a single scanner pass.",
+            "Enabled tray-position tracking across 3 manufacturing processes, supporting positional uniformity analysis and linking solar cell location during a process to its performance data.",
+            "Reduced solar cell scan time by ~90% compared to prior single-solar-cell scan method."
+          ]
+        },
+        {
+          "name": "Large Solar Cell Photobooth",
+          "bullets": [
+            "Converted a large-area solar cell photoluminescence characterization box into a multi-mode photobooth, enabling visual characterization imaging of 400mm solar cells at production scale.",
+            "Engineered and iterated a 3D-printed lighting mount that blocks light leakage and diffuses output, resolving a reflection/flare issue identified during initial validation.",
+            "Installed and validated dual-illumination system (backlight and toplight modes) with external mode-switching, delivering an operator-ready characterization tool."
+          ]
+        }
       ]
     },
     {

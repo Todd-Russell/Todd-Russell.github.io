@@ -141,12 +141,23 @@
 
   function buildExperience(r) {
     return (r.experience || []).map(function (e) {
+      var right = '<div class="exp-role">' + esc(e.role) + '</div>';
+      if (e.intro) right += '<div class="exp-intro">' + esc(e.intro) + '</div>';
+      if (e.groups && e.groups.length) {
+        right += e.groups.map(function (g) {
+          return '<div class="exp-group">' +
+            '<div class="exp-group-name">' + esc(g.name) + '</div>' +
+            '<ul class="exp-bullets">' + (g.bullets || []).map(function (h) { return '<li>' + esc(h) + '</li>'; }).join('') + '</ul>' +
+            '</div>';
+        }).join('');
+      } else {
+        right += '<ul class="exp-bullets">' + (e.highlights || []).map(function (h) { return '<li>' + esc(h) + '</li>'; }).join('') + '</ul>';
+      }
       return '<div class="exp-item reveal">' +
         '<div><div class="exp-co">' + esc(e.company) + '</div>' +
         '<div class="exp-period">' + esc(e.period) + '</div>' +
         '<div class="exp-loc">' + esc(e.location) + '</div></div>' +
-        '<div><div class="exp-role">' + esc(e.role) + '</div>' +
-        '<ul class="exp-bullets">' + (e.highlights || []).map(function (h) { return '<li>' + esc(h) + '</li>'; }).join('') + '</ul></div>' +
+        '<div>' + right + '</div>' +
         '</div>';
     }).join('');
   }

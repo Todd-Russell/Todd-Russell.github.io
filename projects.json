@@ -36,7 +36,7 @@
       "value": "500%",
       "label": "throughput increase"
     },
-    "summary": "Automated laser scribing with machine-vision alignment; 500% throughput and repeatability from 60μm to 20μm.",
+    "summary": "Automated laser scribing with machine-vision alignment; 500% throughput increase and repeatability from 60μm to 20μm.",
     "tags": [
       "Machine Vision",
       "Python",
@@ -82,7 +82,7 @@
     "year": "2026",
     "image": "assets/nir-jig-assembled.jpg",
     "metric": null,
-    "summary": "Scoped, designed, and delivered a custom near-infrared characterization fixture, requirements to assembled tool.",
+    "summary": "Scoped, designed, and delivered a custom near-infrared analysis fixture, from requirements to assembled tool.",
     "tags": [
       "SolidWorks",
       "3D Printing",
@@ -225,7 +225,7 @@
     ],
     "par": {
       "problem": "Measuring intracranial pressure in patients with acute neurologic injury traditionally requires invasive methods.",
-      "action": "Developed a user-friendly SolidWorks prototype to collect patient data and ran end-user interviews against existing solutions.",
+      "action": "Ran end-user interviews against existing solutions and developed a user-friendly SolidWorks prototype to collect patient data.",
       "result": "Enabled clinical evaluation of a non-invasive ultrasound-based intracranial pressure measurement method."
     }
   },
